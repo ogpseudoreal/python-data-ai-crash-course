@@ -1,0 +1,772 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A comprehensive beginner Python course for data analytics, machine learning, and AI applications."><title>Course handbook · Python → Data → AI</title><style>
+:root{--ink:#172c35;--muted:#526770;--teal:#126e7e;--paper:#fcfaf5;--line:#d7e0df;--nav:#eef3f1}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--teal);text-underline-offset:3px}a:hover{color:#093e49}a:focus-visible,button:focus-visible{outline:3px solid #bc5738;outline-offset:3px}
+.brand{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--teal)}.layout{display:grid;grid-template-columns:250px minmax(0,950px);max-width:1240px;margin:auto;gap:44px;padding:38px 30px 80px}
+aside{position:sticky;top:24px;height:calc(100vh - 48px);overflow:auto;padding-right:14px;font-size:13px;line-height:1.5}aside .brand{display:block;padding-bottom:18px;border-bottom:1px solid var(--line)}.navlinks{display:grid;gap:8px;margin:20px 0}.navlinks a{text-decoration:none;padding:7px 10px;border-radius:6px}.navlinks a.current{background:var(--ink);color:white;font-weight:650}.toc{padding-top:18px;border-top:1px solid var(--line)}.toc ul{list-style:none;margin:0;padding:0}.toc>ul>li>a{display:none}.toc li a{display:block;padding:5px 0;text-decoration:none}.toc ul ul{padding:0}.toc ul ul ul{padding-left:12px}.toc li{margin:0}
+main{min-width:0}h1{font-family:Georgia,serif;font-size:52px;line-height:1.09;letter-spacing:-1.6px;margin:28px 0 25px;font-weight:500}h2{font-size:27px;line-height:1.3;margin:55px 0 20px;border-top:1px solid var(--line);padding-top:28px;letter-spacing:-.5px}h3{font-size:20px;line-height:1.4;margin:30px 0 12px}p{margin:15px 0}li{margin:9px 0}strong{font-weight:700}code{font-size:.88em;background:#edf1ef;padding:2px 5px;border-radius:4px;color:#154e59}pre{background:#142d38;color:#edf7f4;padding:22px;border-radius:9px;overflow:auto;line-height:1.65;font-size:14px;margin:24px 0}pre code{background:none;color:inherit;padding:0;font-size:inherit}.tablewrap{overflow:auto;margin:25px 0;border:1px solid var(--line);border-radius:8px}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.55}th{text-align:left;background:#e9efeb;font-weight:700;padding:13px 15px;vertical-align:top}td{padding:13px 15px;border-top:1px solid var(--line);vertical-align:top}tbody tr:nth-child(even){background:#f4f5ef}td:first-child{font-weight:550}blockquote{border-left:4px solid var(--teal);margin:24px 0;padding:2px 22px;background:var(--nav)}.topline{display:flex;justify-content:space-between;gap:20px;align-items:center}.topline span{font-size:12px;color:var(--muted);letter-spacing:.6px}.topline button{border:1px solid var(--line);border-radius:6px;padding:8px 12px;background:transparent;color:var(--muted);cursor:pointer}.meta{color:var(--muted);font-size:13px;margin:35px 0;padding-top:20px;border-top:1px solid var(--line)}.output{background:#eef3ef;color:#263f47;border-left:3px solid #147d92;white-space:pre-wrap;word-break:break-word}.cell-label{font:11px/1.5 system-ui;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin:24px 0 -15px}.plot{display:block;max-width:100%;height:auto;margin:25px auto;border-radius:8px;background:white}details{border:1px solid var(--line);border-radius:6px;padding:12px 16px;margin:18px 0}summary{cursor:pointer;font-weight:600}
+@media(max-width:950px){.layout{grid-template-columns:190px minmax(0,1fr);gap:25px;padding:25px 20px}h1{font-size:43px}}
+@media(max-width:700px){.layout{display:block;padding:20px 18px 50px}aside{position:static;height:auto;padding:0;margin-bottom:30px}.navlinks{grid-template-columns:1fr 1fr;gap:3px}.toc{display:none}h1{font-size:39px}h2{font-size:25px}body{font-size:16px}.topline{flex-wrap:wrap}th,td{min-width:110px}pre{padding:16px;font-size:13px}}
+@media print{body{background:white;font:11pt/1.5 Georgia,serif;color:#111}.layout{display:block;padding:0;max-width:none}aside,.topline button{display:none}h1{font-size:30pt}h2{font-size:20pt;break-before:page}h3{font-size:14pt}pre{white-space:pre-wrap;background:#f2f2f2;color:#111;border:1px solid #ddd;break-inside:avoid;font-size:9pt}table{font-size:9pt}.tablewrap{overflow:visible}tr{break-inside:avoid}a{color:#111;text-decoration:underline}.plot{max-height:7in;object-fit:contain}.meta{font-size:9pt}}
+</style></head><body><div class="layout"><aside><a class="brand" href="index.html">Python / Data / AI</a><nav class="navlinks" aria-label="Course materials"><a class="" href="index.html">Start here</a><a class="current" href="COURSE.html">Course handbook</a><a class="" href="BRIDGE.html">AI apps & career</a><a class="" href="PRACTICE.html">40 exercises</a><a class="" href="GLOSSARY.html">Glossary</a><a class="" href="SOURCES.html">Resource evaluation</a><a class="" href="PROGRESS.html">Progress tracker</a><a class="" href="SOLUTIONS.html">Answer guide</a><a class="" href="VALIDATION.html">Verification</a><a href="LABS.html">Notebook reading room</a></nav><nav aria-label="Page contents"><div class="toc">
+<ul>
+<li><a href="#python-data-ai">Python → Data → AI</a><ul>
+<li><a href="#your-route-from-complete-beginner-to-independent-projects">Your route from complete beginner to independent projects</a></li>
+<li><a href="#module-0-set-up-your-tools">Module 0 — Set up your tools</a></li>
+<li><a href="#module-1-values-variables-and-expressions">Module 1 — Values, variables, and expressions</a></li>
+<li><a href="#module-2-decisions-repetition-and-collections">Module 2 — Decisions, repetition, and collections</a></li>
+<li><a href="#module-3-functions-debugging-tests-and-objects">Module 3 — Functions, debugging, tests, and objects</a></li>
+<li><a href="#module-4-files-and-small-projects">Module 4 — Files and small projects</a></li>
+<li><a href="#module-5-numpy-and-the-math-of-arrays">Module 5 — NumPy and the math of arrays</a></li>
+<li><a href="#module-6-pandas-and-trustworthy-data">Module 6 — pandas and trustworthy data</a></li>
+<li><a href="#module-7-sql-and-charts-that-answer-a-question">Module 7 — SQL and charts that answer a question</a></li>
+<li><a href="#module-8-statistics-and-uncertainty">Module 8 — Statistics and uncertainty</a></li>
+<li><a href="#module-9-your-first-honest-machine-learning-workflow">Module 9 — Your first honest machine-learning workflow</a></li>
+<li><a href="#module-10-model-selection-and-error-analysis">Module 10 — Model selection and error analysis</a></li>
+<li><a href="#module-11-neural-networks-without-mystery">Module 11 — Neural networks without mystery</a></li>
+<li><a href="#module-12-text-retrieval-and-modern-language-ai">Module 12 — Text, retrieval, and modern language AI</a></li>
+<li><a href="#module-13-make-your-work-usable-by-someone-else">Module 13 — Make your work usable by someone else</a></li>
+<li><a href="#module-14-independent-capstone">Module 14 — Independent capstone</a></li>
+<li><a href="#quick-reference-desk-card">Quick-reference desk card</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></aside><main><div class="topline"><span>YOUR BEGINNER-TO-BUILDER COURSE · SEPTEMBER 2026</span><button type="button" onclick="window.print()">Print / Save PDF</button></div><h1 id="python-data-ai">Python → Data → AI</h1>
+<h2 id="your-route-from-complete-beginner-to-independent-projects">Your route from complete beginner to independent projects</h2>
+<p><strong>Your complete plan: approximately 200 focused hours — a 160-hour foundation plus a 40-hour AI application and career bridge.</strong> At your chosen 10–15 hours per week, the planned work takes roughly 14–20 weeks. Allow extra time whenever a checkpoint needs another attempt. Read, type, change, explain, and build. You do not need prior programming experience; your Excel knowledge and basic algebra provide a useful starting point.</p>
+<p>This course aims to make you able to take an unfamiliar CSV file, understand its structure, clean it with a reproducible script, answer useful questions with charts and SQL, and build and evaluate a sensible predictive model. You will also learn how neural networks train, how text retrieval works, and how language-model applications are assembled and evaluated.</p>
+<p>It does not make you an experienced data scientist in a few weeks. Professional proficiency takes repeated work with messy real problems, feedback, and deeper study. The fast route is to remove duplicated content and unnecessary tool changes while retaining practice, statistics, debugging, and honest evaluation.</p>
+<p><strong>Your preferences:</strong> 10–15 study hours per week; comfortable with Excel and basic algebra; interested in analytics, ML models, AI applications, and career preparation. The sequence puts analytics first and develops the other goals from that foundation. Setup is macOS first, based on your current workspace, with a Windows alternative. The exercises use invented retail data and small teaching datasets, so your first work needs no external accounts or private information.</p>
+<h3 id="build-on-what-you-know-from-excel">Build on what you know from Excel</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Excel idea</th>
+<th>Python/data equivalent</th>
+<th>The difference to learn</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cell value</td>
+<td>Variable</td>
+<td>A name refers to a value, not a grid location</td>
+</tr>
+<tr>
+<td>Formula</td>
+<td>Expression or function</td>
+<td>Write reusable logic and validate inputs</td>
+</tr>
+<tr>
+<td>Table column</td>
+<td>pandas Series</td>
+<td>Operate on the whole column</td>
+</tr>
+<tr>
+<td>Filter</td>
+<td>Boolean mask and <code>.loc</code></td>
+<td>The filtering rule becomes saved, repeatable code</td>
+</tr>
+<tr>
+<td>PivotTable</td>
+<td><code>groupby</code> or <code>pivot_table</code></td>
+<td>Define aggregation and missing-value behavior explicitly</td>
+</tr>
+<tr>
+<td>XLOOKUP</td>
+<td>Dictionary lookup or table merge</td>
+<td>A duplicate lookup key can multiply rows in a merge</td>
+</tr>
+<tr>
+<td>IF</td>
+<td><code>if/elif/else</code></td>
+<td>Python blocks use indentation</td>
+</tr>
+<tr>
+<td>COUNTIF/SUMIF</td>
+<td>Mask plus count/sum, or grouping</td>
+<td>Check the denominator and row grain</td>
+</tr>
+<tr>
+<td>Power Query steps</td>
+<td>Data-cleaning functions/pipeline</td>
+<td>You write, test, and rerun each transformation</td>
+</tr>
+</tbody>
+</table></div>
+<p>Use familiar spreadsheet reasoning to check small Python results by hand. Avoid maintaining a separately edited spreadsheet as a second, conflicting source of truth.</p>
+<h3 id="what-counts-as-passing">What counts as passing</h3>
+<p>You can use documentation and look up syntax. For each checkpoint, however, you must design and explain the solution yourself, without an AI assistant writing it. A successful run alone is insufficient: you should predict the output, test an edge case, and explain why the result answers the question.</p>
+<p>Use a three-level score: <strong>0</strong> = cannot start; <strong>1</strong> = complete with substantial hints; <strong>2</strong> = complete independently and explain it. Move on only when every checkpoint criterion scores 2. If you score 0 or 1, revisit the named prerequisite, do two new variants, and retry after a night's sleep. Do not repeat an entire course for one missing concept.</p>
+<h3 id="your-study-rhythm">Your study rhythm</h3>
+<p>A 90-minute session: 10 minutes recalling yesterday without notes; 20 minutes reading or watching the assigned explanation; 45 minutes writing and changing code; 10 minutes checking mistakes; 5 minutes recording the next step. This is a suggested routine, not a research-derived optimum. Use two shorter blocks when necessary.</p>
+<p>After learning a concept, revisit it the next day, later that week, and the following week. Keep <code>learning_log.md</code> with: the problem, your first attempt, the error, the cause, the correction, and a new example. Reading a solution is the start of a repair; reproducing it on different inputs is the evidence that the repair worked.</p>
+<p>An AI tutor can explain an error, ask questions, and give hints. Use: “Give me one hint, do not write the solution. Ask me to predict the next step.” Try for 15–20 minutes before asking. At checkpoints, close the chat. You must be able to maintain code you accept from any source.</p>
+<h3 id="schedule-and-dependencies">Schedule and dependencies</h3>
+<p>The hours below include the selected reading, notebook work, exercises, and module checkpoint. They do <strong>not</strong> include completing every linked external course. Core reading assignments are targeted topics, not whole textbooks.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Focus</th>
+<th style="text-align: right;">Hours</th>
+<th>Concrete output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Tools and first program</td>
+<td style="text-align: right;">3</td>
+<td>Working script and notebook</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Values, variables, expressions, strings</td>
+<td style="text-align: right;">10</td>
+<td>Small calculators</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Decisions, loops, collections</td>
+<td style="text-align: right;">10</td>
+<td>Transaction summaries</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Functions, debugging, tests, objects</td>
+<td style="text-align: right;">12</td>
+<td>Tested reusable functions</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Files, modules, JSON, project structure</td>
+<td style="text-align: right;">9</td>
+<td>CSV-to-summary script</td>
+</tr>
+<tr>
+<td>5</td>
+<td>NumPy and essential linear algebra</td>
+<td style="text-align: right;">10</td>
+<td>Array calculations</td>
+</tr>
+<tr>
+<td>6</td>
+<td>pandas and data quality</td>
+<td style="text-align: right;">14</td>
+<td>Audited retail dataset</td>
+</tr>
+<tr>
+<td>7</td>
+<td>SQL and visual communication</td>
+<td style="text-align: right;">10</td>
+<td>Queries, charts, short report</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Statistics and uncertainty</td>
+<td style="text-align: right;">12</td>
+<td>A defensible comparison</td>
+</tr>
+<tr>
+<td>9</td>
+<td>First ML workflow</td>
+<td style="text-align: right;">14</td>
+<td>Baseline and predictive model</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Model selection and error analysis</td>
+<td style="text-align: right;">12</td>
+<td>Validated model comparison</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Neural-network foundations</td>
+<td style="text-align: right;">10</td>
+<td>Training loop and classifier</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Text, retrieval, and language AI</td>
+<td style="text-align: right;">8</td>
+<td>Search system and AI evaluation plan</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Reproducible, responsible delivery</td>
+<td style="text-align: right;">6</td>
+<td>Rerunnable project handoff</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Independent capstone</td>
+<td style="text-align: right;">20</td>
+<td>Portfolio-quality beginner project</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td style="text-align: right;"><strong>160</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>The 160-hour foundation occupies 8 weeks at 20 hours/week, about 11 at 15, and 16 at 10. Add the <a href="BRIDGE.html">40-hour application and career bridge</a> for your full set of goals: <strong>200 hours, about 14–20 weeks at your pace</strong>. A planning allowance of 220–260 hours including remediation is more forgiving, roughly 15–26 weeks. These are arithmetic conversions, not promises. Do not sacrifice sleep to meet the table.</p>
+<p>For an eight-week intensive schedule: week 1 = Modules 0–1 and 7 hours of Module 2; week 2 = finish 2, complete 3, start 4; week 3 = finish 4, complete 5, start 6; week 4 = finish 6, complete 7, start 8; week 5 = finish 8 and start 9; week 6 = finish 9, complete 10, start 11; week 7 = finish 11, complete 12–13; week 8 = capstone. Slower schedules use the same order.</p>
+<h3 id="the-first-seven-study-sessions">The first seven study sessions</h3>
+<ol>
+<li>Install and verify the tools; run <code>hello.py</code>; change its printed output.</li>
+<li>Numbers, variables, strings; do exercises 1–3.</li>
+<li>Predict outputs; type and modify examples; start Notebook 1.</li>
+<li>Comparisons and <code>if</code>; implement two different discount rules.</li>
+<li>Lists and <code>for</code>; trace each loop iteration on paper.</li>
+<li>Dictionaries and grouping; redo a previous exercise from a blank file.</li>
+<li>Review errors; test your understanding with the Module 1 checkpoint. Continue the remaining module hours as needed.</li>
+</ol>
+<h2 id="module-0-set-up-your-tools">Module 0 — Set up your tools</h2>
+<h3 id="understand-the-pieces">Understand the pieces</h3>
+<p><strong>Python</strong> is a programming language. The <strong>interpreter</strong> is the program that executes Python instructions. <strong>VS Code</strong> is where you edit files; its Python extension connects it to an installed interpreter. A <strong>terminal</strong> accepts operating-system commands. A <strong>notebook</strong> mixes text, executable code cells, and output. Its <strong>kernel</strong> is a running interpreter that remembers values between cells.</p>
+<p>A <code>.py</code> file is a script, executed from top to bottom. A <code>.ipynb</code> file is a notebook. A <code>.csv</code> file is a plain-text table. A package is reusable code installed into an environment. A virtual environment gives a project its own package set. These are different things; installing an editor does not install Python. See <a href="https://code.visualstudio.com/docs/python/python-tutorial">Microsoft's Python setup guide</a>.</p>
+<h3 id="recommended-setup">Recommended setup</h3>
+<p>Use VS Code with the Microsoft <strong>Python</strong> and <strong>Jupyter</strong> extensions, plus a stable Python 3 installation. For a new installation, choose the current stable installer from the <a href="https://www.python.org/downloads/">official downloads page</a>, not a preview release. An existing supported Python 3.12–3.14 installation is also a reasonable starting point. The supplied labs were verified on Python <strong>3.12.14</strong> with the exact library versions in <code>requirements.txt</code>; other interpreter/OS combinations were not exercised here. Obtain VS Code from <a href="https://code.visualstudio.com/">its official site</a>.</p>
+<p>If you already have a working supported Python, verify it first. Do not replace macOS's system-managed software. Open the downloaded course folder using <strong>File → Open Folder</strong> in VS Code, then open <strong>Terminal → New Terminal</strong>. Type terminal commands into that panel, not into a Python file or the <code>&gt;&gt;&gt;</code> Python prompt.</p>
+<p>On macOS, verify that <code>python3</code> reports the version you chose, then create the environment:</p>
+<pre><code class="language-bash">python3 --version
+python3 -m venv .venv
+source .venv/bin/activate
+python --version
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+</code></pre>
+<p>If <code>python3</code> points to an older or unintended installation, use the chosen interpreter's explicit command (for example, <code>python3.14</code>) in the first two commands instead. Once the environment is active, use <code>python</code> consistently.</p>
+<p>On Windows PowerShell:</p>
+<pre><code class="language-powershell">py -3 --version
+py -3 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install --upgrade pip
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+</code></pre>
+<p>These Windows commands call the environment directly and do not depend on PowerShell activation policy. In subsequent terminal examples, substitute <code>.\.venv\Scripts\python.exe</code> for <code>python</code> unless your terminal has already activated that environment.</p>
+<p><code>-m</code> tells Python to run an installed module. <code>venv</code> creates the environment; <code>pip</code> installs packages; <code>requirements.txt</code> records package versions. The leading dot makes <code>.venv</code> a hidden folder on some systems. More details: <a href="https://docs.python.org/3/library/venv.html">Python's venv documentation</a>.</p>
+<p>In VS Code, open the Command Palette with <strong>Cmd+Shift+P</strong> on Mac or <strong>Ctrl+Shift+P</strong> on Windows. Choose <strong>Python: Select Interpreter</strong>, then the interpreter inside <code>.venv</code>. Open <code>notebooks/01_python_basics.ipynb</code>; use the notebook's <strong>Select Kernel</strong> control to choose the same environment. The script interpreter and notebook kernel can accidentally be different. <a href="https://code.visualstudio.com/docs/datascience/jupyter-notebooks">Notebook setup reference</a>.</p>
+<p>Create <code>hello.py</code> and enter:</p>
+<pre><code class="language-python">name = &quot;Somrit&quot;
+study_minutes = 30
+print(f&quot;Hello, {name}. Today I will practice for {study_minutes} minutes.&quot;)
+</code></pre>
+<p>Save it. In the activated terminal, run <code>python hello.py</code>. Change 30 to 45 and rerun. The sentence should change. Now place a breakpoint by clicking beside a line number and run the debugger; inspect the variables and step through the program.</p>
+<p>Verify the package setup in a notebook cell:</p>
+<pre><code class="language-python">import sys
+import numpy as np
+import pandas as pd
+import sklearn
+print(sys.executable)
+print(np.__version__, pd.__version__, sklearn.__version__)
+</code></pre>
+<p>The executable should belong to your selected environment. Read <code>VALIDATION.md</code> to compare versions. You can study Modules 1–4 with Python alone; the data libraries become necessary in Module 5.</p>
+<h3 id="browser-fallback">Browser fallback</h3>
+<p>If local setup blocks your first session, use <a href="https://colab.research.google.com/">Google Colab</a> to open a notebook, or use the browser environment offered by <a href="https://cs50.harvard.edu/python/">CS50P</a>. Google documents its browser-based ML exercises in the <a href="https://developers.google.com/machine-learning/crash-course/prereqs-and-prework">ML prework guide</a>. Save a downloaded copy of your work. When running Notebook 4 in a hosted environment, upload <code>orders.csv</code> and adjust its path. Complete local setup by Module 4 so you learn files, environments, and scripts. The supplied labs require no GPU.</p>
+<h3 id="troubleshooting-you-will-actually-use">Troubleshooting you will actually use</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Likely cause</th>
+<th>First action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command not found</td>
+<td>Wrong command or interpreter not on the command search path</td>
+<td>Restart terminal; verify the installed Python's command</td>
+</tr>
+<tr>
+<td><code>ModuleNotFoundError</code></td>
+<td>Package absent from this interpreter</td>
+<td>Check <code>sys.executable</code>; install with that interpreter's <code>-m pip</code></td>
+</tr>
+<tr>
+<td>Terminal works, notebook fails</td>
+<td>Different kernel</td>
+<td>Select the <code>.venv</code> kernel and restart it</td>
+</tr>
+<tr>
+<td><code>FileNotFoundError</code></td>
+<td>Wrong working directory/path</td>
+<td>Print <code>Path.cwd()</code> and inspect the file location</td>
+</tr>
+<tr>
+<td><code>SyntaxError</code> on <code>pip install</code></td>
+<td>Terminal command entered as Python</td>
+<td>Move the command to the terminal</td>
+</tr>
+<tr>
+<td>Notebook output seems impossible</td>
+<td>Cells ran out of order</td>
+<td>Restart the kernel and run every cell from the top</td>
+</tr>
+<tr>
+<td>Installation wants to compile scientific libraries</td>
+<td>Interpreter/platform mismatch or missing wheel</td>
+<td>Confirm supported Python and library versions before changing tools</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Checkpoint:</strong> explain editor versus interpreter versus kernel; run a script; run a notebook; demonstrate that both use your environment; deliberately cause and fix a misspelled variable. Record what you did.</p>
+<h2 id="module-1-values-variables-and-expressions">Module 1 — Values, variables, and expressions</h2>
+<p><strong>Prerequisite:</strong> Module 0. <strong>Resource:</strong> selected Functions/Variables material from <a href="https://cs50.harvard.edu/python/">CS50P</a>. If that feels too fast, substitute PY4E's Variables lesson from <a href="https://www.py4e.com/lessons">its lesson sequence</a>. Do not watch both courses in full.</p>
+<p>A program is a sequence of precise instructions. Begin with <strong>input → transformation → output</strong>: receive quantities and prices, calculate a total, display it. Before writing code, write a concrete example with its expected answer.</p>
+<pre><code class="language-python">units = 3
+unit_price = 12.50
+subtotal = units * unit_price
+discount_rate = 0.10
+total = subtotal * (1 - discount_rate)
+print(f&quot;Total: {total:.2f}&quot;)  # Total: 33.75
+</code></pre>
+<p><code>=</code> associates a name with a value; it does not mean mathematical equality. The right side is evaluated first. <code>count = count + 1</code> reads the old value and assigns the incremented value. Use names that explain meaning: <code>unit_price</code>, not <code>x</code>, unless doing a short mathematical example.</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Example</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td><code>3</code></td>
+<td>Whole numbers</td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td><code>12.5</code></td>
+<td>Approximate real-number arithmetic</td>
+</tr>
+<tr>
+<td><code>str</code></td>
+<td><code>"Dubai"</code></td>
+<td>Text</td>
+</tr>
+<tr>
+<td><code>bool</code></td>
+<td><code>True</code></td>
+<td>Logical yes/no values</td>
+</tr>
+<tr>
+<td><code>NoneType</code></td>
+<td><code>None</code></td>
+<td>Explicit absence of a value</td>
+</tr>
+</tbody>
+</table></div>
+<p>Use <code>type(value)</code> to inspect a type. Quotes matter: <code>"3"</code> is text, whereas <code>3</code> is numeric. <code>"3" + "4"</code> produces <code>"34"</code>; <code>3 + 4</code> produces <code>7</code>. <code>input()</code> returns text; convert it deliberately using <code>int()</code> or <code>float()</code> and handle invalid input when you learn exceptions.</p>
+<p>Arithmetic operators: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>//</code> (floor division), <code>%</code> (remainder), <code>**</code> (power). Parentheses make your intention clear. For positive quantities, <code>17 // 5</code> is 3 and <code>17 % 5</code> is 2. <code>-7 // 2</code> is -4 because flooring rounds down. <code>2 ** 3</code> is 8; <code>^</code> is not exponentiation in Python.</p>
+<p>Computers approximate most decimal fractions using binary floating point. Do not expect <code>0.1 + 0.2 == 0.3</code> to hold. Use <code>math.isclose</code> for approximate comparisons. For real accounting systems use deliberate decimal or integer-minor-unit rules; this course's retail arithmetic is teaching arithmetic.</p>
+<p>Strings have positions starting at zero:</p>
+<pre><code class="language-python">city = &quot;Dubai&quot;
+print(city[0])      # D
+print(city[-1])     # i
+print(city[1:4])    # uba; stop position is excluded
+clean_name = &quot;  SOMRIT  &quot;.strip().title()
+print(clean_name)   # Somrit
+</code></pre>
+<p>A function call uses parentheses. A method is a function accessed through an object, such as <code>city.lower()</code>. A comment begins with <code>#</code>. An f-string embeds expressions inside braces. <code>:.2f</code> controls display precision; it does not change the stored value.</p>
+<p><strong>Practice:</strong> Notebook 1 and exercises 1–5. Predict every line before executing it. <strong>Checkpoint:</strong> write a price calculator from a blank file, handle text-to-number conversion on a valid input, explain all five types above, and fix one type error. You can look up formatting syntax.</p>
+<h2 id="module-2-decisions-repetition-and-collections">Module 2 — Decisions, repetition, and collections</h2>
+<p><strong>Resource:</strong> CS50P's Conditionals and Loops; use <a href="https://programming-26.mooc.fi/">Helsinki Parts 1–4</a> for extra short exercises where needed.</p>
+<p>Comparisons such as <code>price &gt; 100</code> produce booleans. Use <code>==</code> for equality, <code>!=</code> for inequality, and <code>and</code>, <code>or</code>, <code>not</code> to combine conditions. Use <code>is None</code> to test for the missing-value sentinel. Do not use <code>is</code> as a general numeric/string equality test.</p>
+<pre><code class="language-python">spend = 120
+if spend &gt;= 100:
+    delivery_fee = 0
+elif spend &gt;= 50:
+    delivery_fee = 5
+else:
+    delivery_fee = 10
+</code></pre>
+<p>Indentation defines a block: use four spaces consistently. Only the first true branch in this chain runs. Test boundaries: 49, 50, 99, 100. Many real bugs hide at boundaries, not typical inputs.</p>
+<p>A list stores an ordered collection; a dictionary maps unique keys to values; a set stores unique values; a tuple groups items in an immutable sequence.</p>
+<pre><code class="language-python">amounts = [12, 8, 15]
+total = 0
+for amount in amounts:
+    total += amount
+print(total)  # 35
+
+order = {&quot;customer&quot;: &quot;A&quot;, &quot;amount&quot;: 12}
+print(order[&quot;amount&quot;])
+print(order.get(&quot;coupon&quot;, &quot;none&quot;))
+</code></pre>
+<p>A <code>for</code> loop visits items. <code>range(3)</code> yields 0, 1, 2. <code>enumerate(items)</code> supplies positions and items; <code>zip(a, b)</code> pairs two collections and normally stops at the shorter one. A <code>while</code> loop repeats while a condition remains true; make sure some state changes so it can stop. <code>break</code> exits the loop; <code>continue</code> skips to its next iteration.</p>
+<p>Think through a grouping operation:</p>
+<pre><code class="language-python">orders = [(&quot;A&quot;, 12), (&quot;B&quot;, 8), (&quot;A&quot;, 15)]
+totals = {}
+for customer, amount in orders:
+    totals[customer] = totals.get(customer, 0) + amount
+print(totals)  # {'A': 27, 'B': 8}
+</code></pre>
+<p>Trace the dictionary after each iteration. This same grouping idea reappears in pandas <code>groupby</code> and SQL <code>GROUP BY</code>.</p>
+<p>Lists and dictionaries are mutable: they can change in place. <code>b = a</code> does not duplicate a list; both names refer to the same object. Use <code>a.copy()</code> for a shallow copy; nested mutable items still need care. Strings and tuples cannot have their elements reassigned. Prefer constructing a new list to removing elements while iterating over the original.</p>
+<p>After you can write the loop, learn its compact form:</p>
+<pre><code class="language-python">large_amounts = [amount for amount in amounts if amount &gt;= 10]
+</code></pre>
+<p>Do not compress complicated logic into a comprehension. Readability reduces mistakes. Know that looking for an item in a long list usually inspects items one by one; dictionary/set lookup is typically much faster. This intuition matters before formal algorithm analysis.</p>
+<p><strong>Practice:</strong> exercises 6–10. <strong>Checkpoint:</strong> summarize orders by customer, count unique customers, filter invalid amounts, and explain an empty-input case without copying an existing solution.</p>
+<h2 id="module-3-functions-debugging-tests-and-objects">Module 3 — Functions, debugging, tests, and objects</h2>
+<p><strong>Resources:</strong> selected CS50P Functions, Exceptions, and Unit Tests topics. Use <a href="https://docs.python.org/3/tutorial/index.html">Python's tutorial</a> as a lookup reference once the concepts make sense; it explicitly assumes prior general programming knowledge.</p>
+<p>A function packages an operation so it can be reused and tested. A parameter names an input inside the definition; an argument is the value supplied in a call. <code>return</code> gives a result back to the caller. <code>print</code> only displays something. A function with no explicit return gives <code>None</code>.</p>
+<pre><code class="language-python">def discounted_total(prices, rate=0.0):
+    &quot;&quot;&quot;Return total after a fractional discount; reject invalid inputs.&quot;&quot;&quot;
+    if not 0 &lt;= rate &lt;= 1:
+        raise ValueError(&quot;rate must be between 0 and 1&quot;)
+    if any(price &lt; 0 for price in prices):
+        raise ValueError(&quot;prices must be nonnegative&quot;)
+    return sum(prices) * (1 - rate)
+
+result = discounted_total([10, 20], rate=0.1)
+print(result)  # 27.0
+</code></pre>
+<p><code>prices</code> and <code>rate</code> are local names. Keep inputs explicit rather than relying on changing global variables. A default argument is created once when the function is defined; avoid mutable defaults such as <code>items=[]</code>. Use <code>None</code> and create a new list inside when necessary.</p>
+<p>Use exceptions to communicate errors. Catch the particular exception you can handle. A broad <code>except: pass</code> hides errors and often corrupts analysis silently. A traceback shows the call chain; read the final error type/message, then find the relevant line in your code.</p>
+<p>Debugging sequence: reproduce the problem with the smallest input; state what you expected; inspect actual values and types; test one explanation; change one thing; rerun the original and boundary cases. Use breakpoints for changing state and <code>print</code> for a quick inspection.</p>
+<pre><code class="language-python">from math import isclose
+assert isclose(discounted_total([10, 20], 0.1), 27)
+assert discounted_total([], 0.2) == 0
+assert discounted_total([10], 1) == 0
+
+try:
+    discounted_total([10], 1.5)
+except ValueError:
+    print(&quot;Invalid rate rejected correctly&quot;)
+else:
+    raise AssertionError(&quot;Expected a ValueError&quot;)
+</code></pre>
+<p>An assertion checks an assumption during development. It is not a replacement for validating external input, since Python can disable assertions. Later, put checks into a test runner. Learn the difference between syntax errors, runtime exceptions, and logic errors: a logic error can run successfully and still give a wrong answer.</p>
+<p>Objects combine data and behavior. You already use them: a string has methods; a DataFrame will have columns and methods; a model will have <code>.fit()</code> and <code>.predict()</code>. A class defines a kind of object. Learn enough to read a small class with <code>__init__</code>, attributes, <code>self</code>, and a method. Extensive inheritance design can wait.</p>
+<pre><code class="language-python">class StudySession:
+    def __init__(self, minutes):
+        self.minutes = minutes
+
+    def hours(self):
+        return self.minutes / 60
+
+session = StudySession(90)
+assert session.hours() == 1.5
+</code></pre>
+<p><strong>Practice:</strong> Notebook 2 and exercises 11–14. <strong>Checkpoint:</strong> write two reusable functions, test normal/boundary/invalid cases, fix a traceback, and explain <code>return</code>, scope, and a method call. Build a small receipt calculator without a tutorial.</p>
+<h2 id="module-4-files-and-small-projects">Module 4 — Files and small projects</h2>
+<p><strong>Resources:</strong> CS50P File I/O and Libraries; PY4E Files and Web Services if you need another explanation. The supplied Notebook 2 uses local files and JSON with no network dependency.</p>
+<p>An absolute path starts at the filesystem root; a relative path starts from your current working directory. <code>Path.cwd()</code> tells you where the program is looking. Use <code>pathlib</code> to construct paths instead of manually mixing slashes.</p>
+<pre><code class="language-python">from pathlib import Path
+import csv
+import json
+
+path = Path(&quot;orders_small.csv&quot;)
+path.write_text(&quot;customer,amount\nA,12\nB,8\nA,15\n&quot;, encoding=&quot;utf-8&quot;)
+
+with path.open(encoding=&quot;utf-8&quot;, newline=&quot;&quot;) as handle:
+    rows = list(csv.DictReader(handle))
+
+total = sum(float(row[&quot;amount&quot;]) for row in rows)
+Path(&quot;summary.json&quot;).write_text(
+    json.dumps({&quot;total&quot;: total, &quot;rows&quot;: len(rows)}, indent=2),
+    encoding=&quot;utf-8&quot;,
+)
+</code></pre>
+<p>CSV fields are initially text here. <code>with</code> closes the file even when an exception occurs. JSON represents nested objects, arrays, text, numbers, booleans, and null; it is a common API exchange format. An API is an agreed way for software to request information or actions. For a future network client, check HTTP status, set a timeout, handle failures, and validate the JSON shape before using it. Notebook 2 teaches response parsing through a local example.</p>
+<p>Keep <code>data/raw/</code>, <code>data/clean/</code>, <code>notebooks/</code>, <code>src/</code>, and <code>reports/</code> as your own project grows. Preserve raw input; save cleaned outputs separately. A module is an importable Python file. Put reusable calculations in a module and exploratory work in a notebook. Avoid naming files <code>pandas.py</code>, <code>csv.py</code>, or <code>random.py</code>, which can hide the real library.</p>
+<p>Use <code>if __name__ == "__main__":</code> around a script's entry point when you also want to import its functions without running the entire program. Read enough Git to make a local commit, inspect <code>git diff</code>, and restore a file deliberately; Module 13 covers the workflow.</p>
+<p><strong>Practice:</strong> exercise 15 and the first mini-project: a CSV expense analyzer that validates rows, totals by category, writes JSON, and has at least five meaningful tests. <strong>Checkpoint:</strong> another person can rerun it using your README and a new CSV. This completes the initial 44-hour Python foundation.</p>
+<h2 id="module-5-numpy-and-the-math-of-arrays">Module 5 — NumPy and the math of arrays</h2>
+<p><strong>Resource:</strong> selected array creation, indexing, shape, and aggregation sections of <a href="https://numpy.org/doc/stable/user/absolute_beginners.html">NumPy's beginner guide</a>. <a href="https://wesmckinney.com/book/">Python for Data Analysis</a>, Chapter 4, is an optional deeper companion.</p>
+<p>NumPy operates on arrays of values efficiently. A vector is a one-dimensional collection; a matrix is a two-dimensional collection. A tensor generalizes the idea to other numbers of dimensions. In ML, a common matrix shape is <code>(number_of_examples, number_of_features)</code>.</p>
+<pre><code class="language-python">import numpy as np
+
+quantities = np.array([2, 1, 3])
+prices = np.array([10.0, 25.0, 8.0])
+revenues = quantities * prices
+print(revenues)        # [20. 25. 24.]
+print(revenues.sum())  # 69.0
+
+X = np.array([[2.0, 10.0], [1.0, 25.0], [3.0, 8.0]])
+print(X.shape)        # (3, 2)
+print(X.mean(axis=0))  # one mean per column
+</code></pre>
+<p><code>axis=0</code> reduces down the rows; <code>axis=1</code> reduces across columns for a 2D array. Write the shape beside each operation until it becomes natural. <code>*</code> is elementwise multiplication; <code>@</code> is matrix multiplication. A dot product multiplies corresponding vector entries and adds the results: <code>[2, 3] @ [10, 4] = 32</code>.</p>
+<p>A linear prediction is a weighted sum plus an intercept: <code>prediction = X @ weights + bias</code>. If <code>X</code> is <code>(100, 3)</code>, <code>weights</code> is <code>(3,)</code>, the result is <code>(100,)</code>. This is the same arithmetic as a price calculator, now applied to many examples.</p>
+<p>Broadcasting allows some differently shaped arrays to interact; for example subtracting a <code>(3,)</code> column-mean vector from a <code>(100, 3)</code> matrix. Shapes match from the right when dimensions are equal or one is 1. Accidental <code>(n, 1)</code> versus <code>(n,)</code> combinations can produce <code>(n, n)</code> results, so inspect shape before trusting arithmetic.</p>
+<p>Use boolean masks for filtering: <code>revenues[revenues &gt; 20]</code>. Use <code>np.random.default_rng(42)</code> for repeatable random examples. A seed supports reproducibility; it does not make a dataset representative. Some slices share underlying memory; explicitly copy when independence matters.</p>
+<p><strong>Practice:</strong> Notebook 3, exercises 16–18. <strong>Checkpoint:</strong> calculate per-column means, filter rows, distinguish <code>*</code> from <code>@</code>, and predict the shapes of three operations before running them.</p>
+<h2 id="module-6-pandas-and-trustworthy-data">Module 6 — pandas and trustworthy data</h2>
+<p><strong>Resource:</strong> <a href="https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html">pandas getting-started tutorials</a>: read/write, subsets, new columns, summaries, combining tables, and dates. Use Chapters 7, 8, and 10 of Python for Data Analysis selectively when stuck; the book uses older library versions, so consult current documentation for changed APIs.</p>
+<p>A pandas <strong>Series</strong> is a labeled one-dimensional sequence. A <strong>DataFrame</strong> is a labeled table with potentially different types in each column. An index labels rows; it is not automatically a trustworthy business identifier.</p>
+<p>Before analyzing data, state its <strong>grain</strong>: what does one row represent? In the supplied retail file, each valid business record is one order with one product; repeated rows and invalid values were planted for practice. Read <code>data/README.md</code> before choosing a cleaning rule.</p>
+<pre><code class="language-python">import pandas as pd
+
+orders = pd.DataFrame({
+    &quot;customer&quot;: [&quot;A&quot;, &quot;B&quot;, &quot;A&quot;],
+    &quot;units&quot;: [2, 1, 3],
+    &quot;price&quot;: [10.0, 25.0, 8.0],
+})
+orders[&quot;revenue&quot;] = orders[&quot;units&quot;] * orders[&quot;price&quot;]
+summary = orders.groupby(&quot;customer&quot;, as_index=False)[&quot;revenue&quot;].sum()
+print(summary)
+</code></pre>
+<p>Initial inspection: <code>head()</code>, <code>shape</code>, <code>info()</code>, <code>describe()</code>, <code>isna().sum()</code>, and identifier duplicate counts. Read dates explicitly; check units, currency, valid ranges, categories, and missingness. Blank values do not all mean zero. A missing price cannot safely become a free order.</p>
+<p>Use <code>.loc[rows, columns]</code> for labels and boolean selection; <code>.iloc</code> for integer positions. For assignments use a single <code>.loc</code> operation instead of chained indexing. Example: <code>df.loc[df["units"] &lt; 0, "needs_review"] = True</code>. Treat pandas warnings as something to understand, not silence.</p>
+<p>Use vectorized column operations before reaching for row-by-row <code>apply</code>. For categories, normalize casing and whitespace only when those differences are not meaningful. Record every excluded row and the reason. A duplicate customer is not a duplicate order; deduplication depends on grain and business meaning.</p>
+<p>A merge combines tables on keys. A many-to-many merge can multiply rows and inflate totals. Use <code>validate="many_to_one"</code> when adding a customer dimension to orders, check unmatched keys with <code>indicator=True</code>, and reconcile row counts and total amounts. <code>concat</code> stacks compatible tables; <code>pivot_table</code> reshapes aggregated data.</p>
+<p>For dates, learn <code>pd.to_datetime</code>, <code>.dt</code>, sorting, and resampling. A zero-sales date and a missing date are different. For time zones, define the business day before grouping. Never draw a trend from dates that are still unsorted strings.</p>
+<p>Notebook 4 walks through explicit cleaning rules, exclusion counts, validated joins, aggregation, and CSV output. Its conclusions apply only to the synthetic practice data. Do not infer facts about an actual retailer.</p>
+<p><strong>Practice:</strong> exercises 19–22. <strong>Checkpoint:</strong> take the supplied CSV, document grain and cleaning policy, reconcile raw/duplicate/rejected/clean counts, validate a merge, and give three findings with denominators and units. Your cleaned result must rerun from raw input.</p>
+<h2 id="module-7-sql-and-charts-that-answer-a-question">Module 7 — SQL and charts that answer a question</h2>
+<p><strong>Resources:</strong> <a href="https://docs.python.org/3/library/sqlite3.html">Python's SQLite documentation</a> for connection/parameter examples; <a href="https://matplotlib.org/stable/users/explain/quick_start.html">Matplotlib quick start</a> for figure and axes usage. Use the supplied SQL notebook as the guided lesson.</p>
+<p>SQL asks questions of tables in a database. Start with <code>SELECT</code> (columns), <code>FROM</code> (table), <code>WHERE</code> (filter rows), <code>GROUP BY</code> (aggregate groups), <code>HAVING</code> (filter groups), and <code>ORDER BY</code> (sort results). <code>COUNT(*)</code> counts rows; <code>COUNT(column)</code> counts non-null entries. Use <code>IS NULL</code>, not <code>= NULL</code>.</p>
+<pre><code class="language-sql">SELECT customer, SUM(amount) AS total_amount
+FROM orders
+WHERE amount &gt; 0
+GROUP BY customer
+HAVING SUM(amount) &gt;= 20
+ORDER BY total_amount DESC;
+</code></pre>
+<p>An inner join retains matched rows; a left join retains all left rows and attaches matches when present. A condition on the right table in <code>WHERE</code> can accidentally remove unmatched rows after a left join. Learn join keys and cardinality before combining large tables. Use parameter binding for values supplied from outside the program; do not build SQL by concatenating input strings.</p>
+<p>Produce the same grouped result once in pandas and once in SQL and compare them. This is a useful independent check of your interpretation. Later learn common table expressions and window functions for ranking or running totals; they are optional extensions after the core exercise.</p>
+<p>Choose a chart from the question: a bar chart compares categories, a line chart shows ordered change over time, a histogram shows one distribution, a scatter plot explores the relationship between two numeric variables. Label title, axes, units, period, and source. Bars should normally start at zero because their length carries the value. A histogram's bin choices affect the impression; inspect more than one sensible bin width.</p>
+<pre><code class="language-python">import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(figsize=(6, 3.5))
+ax.bar([&quot;A&quot;, &quot;B&quot;], [44, 25])
+ax.set(title=&quot;Synthetic revenue by customer&quot;, xlabel=&quot;Customer&quot;, ylabel=&quot;Revenue (AED)&quot;)
+fig.tight_layout()
+plt.show()
+</code></pre>
+<p>Write a finding as: <strong>observation → evidence → interpretation → limitation</strong>. Example: “Customer A accounts for 44 of 69 AED in this three-order example. That concentration is visible in the totals, but three invented orders cannot establish a repeat-purchase pattern.” A chart is evidence for a bounded claim, not decoration.</p>
+<p><strong>Practice:</strong> Notebook 5, exercises 23–25. <strong>Checkpoint:</strong> correctly filter and aggregate with SQL; explain a left join; create three appropriate labeled charts; write a one-page analytical memo that distinguishes data from conjecture.</p>
+<h2 id="module-8-statistics-and-uncertainty">Module 8 — Statistics and uncertainty</h2>
+<p><strong>Resource:</strong> selected data summaries, probability, sampling, and inference topics from <a href="https://www.openintro.org/book/os/">OpenIntro Statistics</a>. Google's <a href="https://developers.google.com/machine-learning/crash-course/prereqs-and-prework">ML prerequisite guide</a> is a useful checklist of the algebra needed next.</p>
+<p>A population is the group you want to understand; a sample is what you observe. A mean uses every numeric value and can be moved by extreme values; a median is the middle ordered value. Standard deviation describes spread. A percentile marks a point below which a specified proportion falls, subject to the percentile convention used. Always inspect the distribution as well as a summary.</p>
+<p>For values <code>[10, 10, 10, 100]</code>, the mean is 32.5 and median 10. Neither is “the correct average” without a question. The mean helps reconcile total spending; the median describes a typical middle observation here.</p>
+<p>Rates need denominators. If group A has 20 conversions from 100 visitors and B has 12 from 40, their rates are 20% and 30%. The difference is <strong>10 percentage points</strong>, or a <strong>50% relative increase</strong> compared with A. It is not a 10% relative increase. Pooling groups can change the conclusion when their compositions differ.</p>
+<p>Probability describes uncertainty on a 0–1 scale. Conditional probability changes the reference group: <code>P(purchase | clicked)</code> concerns people who clicked. Bayes' rule reverses conditioning using the base rate. A rare event can produce many false alarms even with a seemingly accurate classifier.</p>
+<p>Sampling variation means different samples give different estimates. Standard error describes estimator variability, whereas standard deviation describes the spread of observations. More data reduces random sampling error under suitable conditions, but does not automatically repair biased sampling or bad labels.</p>
+<p>A confidence interval comes from a procedure with a stated long-run coverage under assumptions; it is not, in frequentist interpretation, a post-data probability assigned to one fixed parameter. A p-value is the probability, under a specified null model, of results at least as extreme as observed according to the chosen test. It is not the probability the null is true. Report effect size and uncertainty, not just a threshold crossing.</p>
+<p>A bootstrap repeatedly resamples the observed data with replacement to estimate a statistic's variability. Notebook 3 illustrates a percentile interval for a mean under an independent-observation assumption. Dependent time series or repeated-customer observations need different resampling designs. A convenient interval is not automatically valid.</p>
+<p>Correlation measures association and cannot alone establish causation. A campaign's sales may rise because of seasonality, selection, or simultaneous changes. A randomized experiment can support a causal comparison when assignment and analysis are sound. Decide the metric, eligibility, unit of randomization, duration, and stopping rule before inspecting outcomes. Repeatedly checking until something looks significant changes error rates.</p>
+<p>Math to know before ML: fractions and percentages; algebraic variables; functions and graphs; a line <code>y = b + wx</code>; summation as repeated addition; vectors and dot products; logarithms as inverses of exponentials; the idea of slope. Full calculus proofs can follow later, but understand how a small change in a weight changes an error.</p>
+<p><strong>Practice:</strong> exercises 26–29 and Notebook 3's statistics section. <strong>Checkpoint:</strong> explain mean versus median, compute weighted rates, interpret uncertainty without overclaiming, identify a confounder, and propose an appropriate sampling unit.</p>
+<h2 id="module-9-your-first-honest-machine-learning-workflow">Module 9 — Your first honest machine-learning workflow</h2>
+<p><strong>Resources:</strong> Google's <a href="https://developers.google.com/machine-learning/crash-course">Machine Learning Crash Course</a> for linear/logistic regression, classification, and generalization; the <a href="https://inria.github.io/scikit-learn-mooc/">Inria scikit-learn course</a> for tabular workflows and pipelines. These resources assume Python familiarity, which you now have.</p>
+<p>AI is the broad field of building systems that perform tasks associated with intelligence. ML learns patterns from examples. Deep learning uses neural networks with multiple layers. Analytics describes and investigates data; ML predicts or identifies structure. A useful rule or SQL query may solve a problem without ML.</p>
+<p>In <strong>supervised learning</strong>, each example has input features <code>X</code> and a target <code>y</code>. Regression predicts a number, such as delivery minutes. Classification predicts a category, such as a document topic. In <strong>unsupervised learning</strong>, there is no supplied target; clustering groups similar examples, and dimensionality reduction finds a smaller representation. Reinforcement learning concerns actions, rewards, and sequential decisions; it is a later specialization.</p>
+<p>Start by writing: “At time T, using information available by T, predict Y for population P so that someone can do action A.” That sentence determines which features are legitimate, how data should be split, and which errors matter.</p>
+<p>Then follow this sequence:</p>
+<ol>
+<li>Define the observation unit, prediction moment, target, and useful metric.</li>
+<li>Reserve an untouched test set using a split that matches future use.</li>
+<li>Explore and develop on training data; use validation or cross-validation for choices.</li>
+<li>Build a trivial baseline before a more complex model.</li>
+<li>Fit preprocessing and model together in a pipeline.</li>
+<li>Compare candidates using training-side validation only.</li>
+<li>Freeze the decision, then evaluate once on the test set.</li>
+<li>Inspect errors and state limitations; further changes require fresh evaluation evidence.</li>
+</ol>
+<p>Random splits suit some independent examples. Forecasting usually needs earlier data for training and later data for evaluation. Multiple rows from one person or device often need a group split. Randomly separating near-duplicate rows can make a model look excellent while testing memorization.</p>
+<p><strong>Leakage</strong> occurs when information unavailable in actual prediction enters learning or evaluation. Examples: including an eventual refund outcome to predict refunds earlier, fitting a scaler on the entire dataset, tuning against the test score, or letting the same customer appear on both sides when evaluating new-customer performance. <a href="https://scikit-learn.org/stable/common_pitfalls.html">scikit-learn's common pitfalls</a> explain why pipelines help keep fitted preprocessing inside training folds.</p>
+<p>A model's <code>.fit(X, y)</code> learns from data. <code>.predict(X)</code> produces outputs for supplied inputs. A scaler's <code>.fit</code> learns training means/spreads and <code>.transform</code> applies them. The test set gets <code>.transform</code>, never <code>.fit</code> or <code>.fit_transform</code>.</p>
+<p>For regression, mean absolute error (MAE) is the average absolute prediction error in target units. Root mean squared error (RMSE) penalizes large errors more strongly and also uses target units. <code>R²</code> compares squared error with a constant-mean reference and can be negative on new data. Use a dummy mean or median predictor as a baseline.</p>
+<p>For classification, a confusion matrix counts true/false positives/negatives for a defined positive class. Accuracy is the fraction correct; precision is <code>TP/(TP+FP)</code>; recall is <code>TP/(TP+FN)</code>; F1 is their harmonic mean. Specify how undefined cases are handled. A 99% negative dataset allows 99% accuracy by always guessing negative. Use metrics and thresholds that reflect error costs, class balance, and intended use.</p>
+<p>Notebook 6 compares a dummy model with a linear model and a tree ensemble, using a preprocessing pipeline and training-side cross-validation. Its generated regression data are a controlled teaching problem, not evidence of business value.</p>
+<p><strong>Practice:</strong> exercises 30–32. <strong>Checkpoint:</strong> explain every step in your pipeline; choose an appropriate split; beat or honestly fail to beat a baseline; report the test metric only after model selection; identify two plausible leakage routes.</p>
+<h2 id="module-10-model-selection-and-error-analysis">Module 10 — Model selection and error analysis</h2>
+<p><strong>Resources:</strong> Inria's cross-validation and tree-ensemble sections; selected model assessment/resampling material from <a href="https://www.statlearning.com/">An Introduction to Statistical Learning, Python edition</a>. Use the textbook for depth after the lab, not as another start-to-finish prerequisite.</p>
+<p>Linear regression fits a weighted sum. Logistic regression uses a transformed weighted sum for classification. A decision tree partitions feature space using questions. Random forests combine many varied trees; boosting builds an ensemble by sequentially addressing an objective. A neural network learns layers of transformations. Model choice depends on data and constraints; more complicated is not automatically more useful.</p>
+<p>Underfitting means the model misses important patterns; overfitting means it captures training-specific patterns that do not generalize. Compare training and validation error. A large gap can indicate overfitting; high error on both can indicate insufficient features, a poor model class, wrong assumptions, or irreducible uncertainty. More data helps some of these problems, not all.</p>
+<p>Parameters are learned quantities such as coefficients. Hyperparameters are choices such as tree depth or regularization strength. Regularization discourages excessive complexity. Cross-validation rotates held-out folds within training data to assess candidates. Report its spread as descriptive fold variability, not automatically a confidence interval.</p>
+<p>Tune a small, reasoned set of choices. Keep preprocessing inside the cross-validation pipeline. Decide the metric first. Every additional search opportunity risks fitting your development process to the validation evidence. Keep an experiment table recording hypothesis, change, split, metric, cost, and decision.</p>
+<p>Missing numeric values may be imputed using training medians; categories may use one-hot encoding with an explicit policy for unseen values. Use <code>ColumnTransformer</code> when columns need different processing. Decide whether missingness itself carries useful information and whether that pattern will persist.</p>
+<p>Clustering and principal component analysis (PCA) can be useful exploratory tools. Scaling and distance choice affect results. A cluster is not automatically a meaningful customer segment; validate stability and usefulness. PCA directions summarize variance, not necessarily predictive or causal importance.</p>
+<p>Inspect errors by meaningful slices, such as product type or month, including sample counts. Feature importance describes the fitted model under a method's assumptions; it does not establish causality. Correlated features can make importance unstable. Calibration concerns whether predicted probabilities match observed event frequencies; ranking quality alone does not guarantee it.</p>
+<p><strong>Practice:</strong> exercises 33–35; extend Notebook 6 with one predeclared training-side experiment. <strong>Checkpoint:</strong> justify a candidate change, compare it fairly, explain a failure slice, distinguish parameter from hyperparameter, and resist further tuning on the final test result.</p>
+<h2 id="module-11-neural-networks-without-mystery">Module 11 — Neural networks without mystery</h2>
+<p><strong>Resources:</strong> selected neural-network sections of Google MLCC; <a href="https://docs.pytorch.org/tutorials/beginner/basics/intro.html">PyTorch Learn the Basics</a> for the next framework step. <a href="https://course.fast.ai/">fast.ai</a> becomes useful once you can code comfortably; it is not your day-one Python teacher.</p>
+<p>A neuron forms a weighted sum plus a bias, then applies a nonlinear activation. Layers compose these operations. Nonlinearity lets the model represent relationships a single linear transformation cannot. A loss measures the discrepancy between prediction and target. Training adjusts weights to reduce that loss.</p>
+<p>For a simple model <code>prediction = weight * x + bias</code>, mean squared loss is the average of <code>(prediction - target) ** 2</code>. A derivative describes the local sensitivity to a change. A gradient collects those sensitivities for all trainable parameters.</p>
+<p>Gradient descent repeats: predict → calculate loss → calculate gradients → move parameters a small distance opposite the gradient. The learning rate controls that distance. Too large can diverge; too small can learn slowly. Backpropagation efficiently applies the chain rule through a network to compute gradients; it is not a separate model.</p>
+<p>An epoch is one pass over the training set. A batch is a subset processed in one update. Inference uses learned weights without updating them. For reproducibility, record data, splits, versions, seeds, and training settings; a seed alone does not guarantee bit-identical results on every device.</p>
+<p>Notebook 7 first implements gradient descent for a line using NumPy, so you can see the arithmetic. It then compares a linear classifier with a small neural network on a nonlinear synthetic dataset. This is a neural-network foundation exercise, not large-scale deep learning. It runs on a CPU with scikit-learn.</p>
+<p>For a subsequent PyTorch implementation, understand tensors, <code>Dataset</code>/<code>DataLoader</code>, <code>nn.Module</code>, the forward pass, loss, <code>zero_grad</code>, <code>backward</code>, and the optimizer step. Learn <code>model.train()</code> versus <code>model.eval()</code> and disabled gradient tracking at inference. Follow the current official installation selector when you reach this optional framework extension; PyTorch is not required for the supplied labs.</p>
+<p><strong>Practice:</strong> exercises 36–37. <strong>Checkpoint:</strong> explain why weights change, show loss reduction, recognize a learning-rate failure, and explain why a nonlinear hidden layer can help a curved decision boundary. Do not infer that a neural network is best for ordinary tabular data from this deliberately nonlinear example.</p>
+<h2 id="module-12-text-retrieval-and-modern-language-ai">Module 12 — Text, retrieval, and modern language AI</h2>
+<p><strong>Resource:</strong> <a href="https://huggingface.co/learn/llm-course/chapter1/1">Hugging Face's LLM course introduction and first chapter</a>, then its model-use material as an extension. The full course expects solid Python and recommends prior deep-learning foundations. Its later fine-tuning chapters are for later study.</p>
+<p>NLP works with language data. A token is a unit used by a tokenizer; it may be part of a word. A representation converts text into numbers. TF-IDF weights terms using their frequency within a document and their prevalence across a document collection. An embedding is a numeric representation, often learned, that can capture relationships beyond exact term overlap.</p>
+<p>Notebook 8 builds a local retrieval system over a small invented document collection. It vectorizes documents, compares a query using cosine similarity, returns ranked passages, and evaluates a fixed set of questions. This is lexical search; it contains no language model and generates no answers. That distinction matters when evaluating what a system can do.</p>
+<p>A transformer uses attention to combine information across token positions. Many generative language models predict a distribution over the next token repeatedly, conditioned on the current context. Pretraining learns broad patterns; fine-tuning further updates weights for selected data/objectives. Prompting supplies instructions and context at inference without necessarily changing weights.</p>
+<p>A retrieval-augmented generation application has two parts: retrieve relevant evidence, then provide it to a generator to help produce an answer. Measure them separately. Good retrieval does not guarantee a faithful answer; fluent prose does not prove that retrieval succeeded. A context window limits how much text a model processes in one request.</p>
+<p>Design your first AI app before adding frameworks:</p>
+<ol>
+<li>Define a narrow task, such as answering questions about a small handbook.</li>
+<li>Make 20–30 representative questions with expected evidence, including missing-answer cases.</li>
+<li>Establish a simple retrieval or rules baseline.</li>
+<li>If adding a generator, specify evidence citation and an “insufficient information” response.</li>
+<li>Evaluate correctness, support in sources, rejection of unanswerable questions, latency, and cost.</li>
+<li>Keep credentials in environment variables, set usage limits, and log only appropriate data.</li>
+</ol>
+<p>Retrieved pages and user-provided documents are data, not instructions that should override the application's rules. Prompt injection occurs when untrusted content tries to redirect the system. Keep tool permissions narrow, validate inputs/outputs, and require explicit authorization for consequential external actions.</p>
+<p>The core exercise uses no paid API. A real hosted or local LLM integration is an optional next project after this course; it requires choosing a provider/model, checking current documentation and terms, and then testing actual behavior. Reading a simulated API response is not the same as completing that integration.</p>
+<p><strong>Practice:</strong> Notebook 8 and exercise 38. <strong>Checkpoint:</strong> distinguish retrieval from generation, prompting from training, and lexical vectors from learned embeddings; measure retrieval quality; design an evaluation set that includes failures.</p>
+<h2 id="module-13-make-your-work-usable-by-someone-else">Module 13 — Make your work usable by someone else</h2>
+<p>Reproducibility means a person can follow your instructions, use the specified input, and obtain materially consistent results. Restart every notebook and run from the first cell. Extract reusable processing into functions or scripts. Record package versions and data provenance. Separate inputs, outputs, configuration, and credentials.</p>
+<p>Create a README containing the question, data origin, setup commands, run order, output locations, tests, results, and limitations. Record dependency versions with <code>python -m pip freeze &gt; environment-freeze.txt</code> in your project environment. A dependency list is useful but is not a universal cross-platform lockfile.</p>
+<p>Use Git locally to track deliberate changes:</p>
+<pre><code class="language-bash">git init
+git status
+git add README.md src tests
+git diff --staged
+git commit -m &quot;Add reproducible analysis and input checks&quot;
+</code></pre>
+<p>These commands assume you created <code>src/</code> and <code>tests/</code> and configured Git. Install/learn Git from <a href="https://git-scm.com/doc">the official documentation</a>. Git tracks changes locally; a remote hosting service is a separate optional step. Put <code>.venv/</code>, private data, credentials, and generated caches in <code>.gitignore</code>; do not publish them accidentally.</p>
+<p>Record a model's intended use, training population, evaluation split, metrics, limitations, and unsuitable uses. Monitor input changes and performance where labels become available. Data drift is a change in inputs; concept drift is a change in the relation between inputs and target. Neither automatically tells you which repair is appropriate.</p>
+<p>Respect data permissions. Check representativeness, labeling quality, and performance differences across relevant groups with adequate sample sizes. A statistically better model can still be unusable because of delay, cost, harmful errors, or inaccessible explanations. Avoid running serialized models from untrusted sources; some serialization formats can execute code when loaded.</p>
+<p><strong>Practice:</strong> exercise 39. <strong>Checkpoint:</strong> rerun in a fresh kernel, provide a clear setup/run path, demonstrate a failed-input check, and explain what would have to be monitored after deployment. Public deployment is not required for course completion.</p>
+<h2 id="module-14-independent-capstone">Module 14 — Independent capstone</h2>
+<h3 id="required-project-answer-a-question-then-predict-something-useful">Required project: answer a question, then predict something useful</h3>
+<p>Choose a public dataset with a documented origin and license, or an authorized dataset from your own work. Define a narrowly bounded question and prediction target. The synthetic course data can be used for rehearsal, but the final independence check should use a different dataset with unfamiliar imperfections. Dataset choice should serve the question, not just a leaderboard.</p>
+<p>Suggested theme: <strong>retail operations</strong>. First identify how order value or delivery performance varies by a useful segment. Then predict a future quantity or category using only information available at the prediction moment. If the chosen data lack a legitimate target or timing information, change the question or select another dataset; do not invent a causal story or a predictive task that leaks the answer.</p>
+<p>Allocate the 20 hours: 2 for question and dataset inspection; 4 for cleaning and tests; 4 for analysis and charts; 5 for modeling and evaluation; 3 for error analysis and writing; 2 for independent rerun and presentation. Add time when data access or quality demands it.</p>
+<p>Deliver:</p>
+<ul>
+<li>A README, source/license note, and data dictionary with grain and units.</li>
+<li>Raw-data checks, explicit cleaning decisions, exclusion counts, and at least five useful tests.</li>
+<li>At least three question-driven charts and one SQL query reconciled to a pandas result.</li>
+<li>A declared split, baseline, and at most three reasoned model candidates compared on training-side validation.</li>
+<li>A final evaluation after selection, error examples, and limitations on generalization.</li>
+<li>A one-page memo containing findings, practical implications, and what the evidence cannot establish.</li>
+<li>A rerunnable notebook or script and dependency record.</li>
+</ul>
+<h3 id="rubric">Rubric</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Area</th>
+<th style="text-align: right;">Points</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Problem definition</td>
+<td style="text-align: right;">10</td>
+<td>Clear population, unit, target, prediction time, decision</td>
+</tr>
+<tr>
+<td>Data understanding and cleaning</td>
+<td style="text-align: right;">20</td>
+<td>Provenance, reconciliation, justified decisions</td>
+</tr>
+<tr>
+<td>Python and reproducibility</td>
+<td style="text-align: right;">20</td>
+<td>Readable functions, tests, fresh rerun, instructions</td>
+</tr>
+<tr>
+<td>Analysis and communication</td>
+<td style="text-align: right;">15</td>
+<td>Correct metrics, charts, denominators, careful claims</td>
+</tr>
+<tr>
+<td>Modeling and evaluation</td>
+<td style="text-align: right;">25</td>
+<td>Baseline, valid split, leakage controls, fair selection</td>
+</tr>
+<tr>
+<td>Error analysis and limitations</td>
+<td style="text-align: right;">10</td>
+<td>Concrete failure cases and practical boundaries</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>100</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>Pass at <strong>80/100</strong>, with no critical failure. Leakage, fabricated data provenance, a wrong central denominator, or inability to rerun are critical failures regardless of total score. Repair and resubmit. Use the rubric with a knowledgeable reviewer when possible; self-assessment is less reliable than external review.</p>
+<p>Your final demonstration: in 10 minutes, explain the question, inspect a raw row, trace it through cleaning, justify the split and baseline, interpret one error, and rerun a small piece live. Then do exercise 40 with unfamiliar inputs.</p>
+<h3 id="what-to-learn-next">What to learn next</h3>
+<p>For <strong>analytics</strong>, deepen SQL joins/window functions, experimental design, domain metrics, time series, and communication. Build two more independent reports using different data grains.</p>
+<p>For <strong>ML engineering</strong>, add stronger testing, packaging, APIs, containers, deployment, monitoring, time/group evaluation, and a real PyTorch project. Work through the relevant ISLP chapters and remaining Inria modules.</p>
+<p>For <strong>AI applications</strong>, continue directly into the <a href="BRIDGE.html">40-hour application and career bridge</a>: serve a trained model, evaluate a pretrained text model, and build a narrow document assistant with repeatable evaluations and permission boundaries. Then deepen Hugging Face or fast.ai study. Do not begin by training a large language model from scratch.</p>
+<p>For <strong>career preparation</strong>, add collaborative Git work, code review, two further original projects, SQL practice, mathematical depth, and explaining tradeoffs aloud. This crash course establishes the base; employability depends on the role and the quality of the work you can independently demonstrate.</p>
+<h2 id="quick-reference-desk-card">Quick-reference desk card</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Need</th>
+<th>Python pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inspect a value</td>
+<td><code>print(value)</code>, <code>type(value)</code></td>
+</tr>
+<tr>
+<td>Inspect a table</td>
+<td><code>df.head()</code>, <code>df.info()</code>, <code>df.shape</code></td>
+</tr>
+<tr>
+<td>Make a function</td>
+<td><code>def name(inputs): ... return result</code></td>
+</tr>
+<tr>
+<td>Filter a list</td>
+<td><code>[x for x in values if condition]</code></td>
+</tr>
+<tr>
+<td>Count/group</td>
+<td>Dictionary loop, <code>groupby</code>, or SQL <code>GROUP BY</code></td>
+</tr>
+<tr>
+<td>Read a CSV</td>
+<td><code>pd.read_csv(path)</code></td>
+</tr>
+<tr>
+<td>Filter rows</td>
+<td><code>df.loc[condition].copy()</code></td>
+</tr>
+<tr>
+<td>Check missingness</td>
+<td><code>df.isna().sum()</code></td>
+</tr>
+<tr>
+<td>Validate an identifier</td>
+<td><code>df["id"].is_unique</code></td>
+</tr>
+<tr>
+<td>Join safely</td>
+<td><code>left.merge(right, on="id", validate="many_to_one")</code></td>
+</tr>
+<tr>
+<td>Inspect working folder</td>
+<td><code>Path.cwd()</code></td>
+</tr>
+<tr>
+<td>Install a package</td>
+<td>Terminal: <code>python -m pip install package_name</code></td>
+</tr>
+<tr>
+<td>Fit a model</td>
+<td><code>pipeline.fit(X_train, y_train)</code></td>
+</tr>
+<tr>
+<td>Predict</td>
+<td><code>pipeline.predict(X_test)</code></td>
+</tr>
+<tr>
+<td>Repair strange notebook state</td>
+<td>Restart kernel, run all cells</td>
+</tr>
+</tbody>
+</table></div>
+<p>Keep <a href="GLOSSARY.html">the glossary</a>, <a href="PRACTICE.html">exercise workbook</a>, and <a href="SOURCES.html">source evaluation</a> beside the handbook. You are learning a way of reasoning: define the problem, inspect the evidence, write a small solution, check it, and explain its limits.</p><div class="meta">Designed for 10–15 hours a week · 160-hour foundation + 40-hour application and career bridge<br>Learn by building, testing, and explaining. Time estimates are planning guides; checkpoints determine progress.</div></main></div></body></html>

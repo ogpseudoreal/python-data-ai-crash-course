@@ -1,0 +1,131 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A comprehensive beginner Python course for data analytics, machine learning, and AI applications."><title>Answer guide · Python → Data → AI</title><style>
+:root{--ink:#172c35;--muted:#526770;--teal:#126e7e;--paper:#fcfaf5;--line:#d7e0df;--nav:#eef3f1}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--teal);text-underline-offset:3px}a:hover{color:#093e49}a:focus-visible,button:focus-visible{outline:3px solid #bc5738;outline-offset:3px}
+.brand{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--teal)}.layout{display:grid;grid-template-columns:250px minmax(0,950px);max-width:1240px;margin:auto;gap:44px;padding:38px 30px 80px}
+aside{position:sticky;top:24px;height:calc(100vh - 48px);overflow:auto;padding-right:14px;font-size:13px;line-height:1.5}aside .brand{display:block;padding-bottom:18px;border-bottom:1px solid var(--line)}.navlinks{display:grid;gap:8px;margin:20px 0}.navlinks a{text-decoration:none;padding:7px 10px;border-radius:6px}.navlinks a.current{background:var(--ink);color:white;font-weight:650}.toc{padding-top:18px;border-top:1px solid var(--line)}.toc ul{list-style:none;margin:0;padding:0}.toc>ul>li>a{display:none}.toc li a{display:block;padding:5px 0;text-decoration:none}.toc ul ul{padding:0}.toc ul ul ul{padding-left:12px}.toc li{margin:0}
+main{min-width:0}h1{font-family:Georgia,serif;font-size:52px;line-height:1.09;letter-spacing:-1.6px;margin:28px 0 25px;font-weight:500}h2{font-size:27px;line-height:1.3;margin:55px 0 20px;border-top:1px solid var(--line);padding-top:28px;letter-spacing:-.5px}h3{font-size:20px;line-height:1.4;margin:30px 0 12px}p{margin:15px 0}li{margin:9px 0}strong{font-weight:700}code{font-size:.88em;background:#edf1ef;padding:2px 5px;border-radius:4px;color:#154e59}pre{background:#142d38;color:#edf7f4;padding:22px;border-radius:9px;overflow:auto;line-height:1.65;font-size:14px;margin:24px 0}pre code{background:none;color:inherit;padding:0;font-size:inherit}.tablewrap{overflow:auto;margin:25px 0;border:1px solid var(--line);border-radius:8px}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.55}th{text-align:left;background:#e9efeb;font-weight:700;padding:13px 15px;vertical-align:top}td{padding:13px 15px;border-top:1px solid var(--line);vertical-align:top}tbody tr:nth-child(even){background:#f4f5ef}td:first-child{font-weight:550}blockquote{border-left:4px solid var(--teal);margin:24px 0;padding:2px 22px;background:var(--nav)}.topline{display:flex;justify-content:space-between;gap:20px;align-items:center}.topline span{font-size:12px;color:var(--muted);letter-spacing:.6px}.topline button{border:1px solid var(--line);border-radius:6px;padding:8px 12px;background:transparent;color:var(--muted);cursor:pointer}.meta{color:var(--muted);font-size:13px;margin:35px 0;padding-top:20px;border-top:1px solid var(--line)}.output{background:#eef3ef;color:#263f47;border-left:3px solid #147d92;white-space:pre-wrap;word-break:break-word}.cell-label{font:11px/1.5 system-ui;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin:24px 0 -15px}.plot{display:block;max-width:100%;height:auto;margin:25px auto;border-radius:8px;background:white}details{border:1px solid var(--line);border-radius:6px;padding:12px 16px;margin:18px 0}summary{cursor:pointer;font-weight:600}
+@media(max-width:950px){.layout{grid-template-columns:190px minmax(0,1fr);gap:25px;padding:25px 20px}h1{font-size:43px}}
+@media(max-width:700px){.layout{display:block;padding:20px 18px 50px}aside{position:static;height:auto;padding:0;margin-bottom:30px}.navlinks{grid-template-columns:1fr 1fr;gap:3px}.toc{display:none}h1{font-size:39px}h2{font-size:25px}body{font-size:16px}.topline{flex-wrap:wrap}th,td{min-width:110px}pre{padding:16px;font-size:13px}}
+@media print{body{background:white;font:11pt/1.5 Georgia,serif;color:#111}.layout{display:block;padding:0;max-width:none}aside,.topline button{display:none}h1{font-size:30pt}h2{font-size:20pt;break-before:page}h3{font-size:14pt}pre{white-space:pre-wrap;background:#f2f2f2;color:#111;border:1px solid #ddd;break-inside:avoid;font-size:9pt}table{font-size:9pt}.tablewrap{overflow:visible}tr{break-inside:avoid}a{color:#111;text-decoration:underline}.plot{max-height:7in;object-fit:contain}.meta{font-size:9pt}}
+</style></head><body><div class="layout"><aside><a class="brand" href="index.html">Python / Data / AI</a><nav class="navlinks" aria-label="Course materials"><a class="" href="index.html">Start here</a><a class="" href="COURSE.html">Course handbook</a><a class="" href="BRIDGE.html">AI apps & career</a><a class="" href="PRACTICE.html">40 exercises</a><a class="" href="GLOSSARY.html">Glossary</a><a class="" href="SOURCES.html">Resource evaluation</a><a class="" href="PROGRESS.html">Progress tracker</a><a class="current" href="SOLUTIONS.html">Answer guide</a><a class="" href="VALIDATION.html">Verification</a><a href="LABS.html">Notebook reading room</a></nav><nav aria-label="Page contents"><div class="toc">
+<ul>
+<li><a href="#answer-guide">Answer guide</a><ul>
+<li><a href="#python-basics">Python basics</a></li>
+<li><a href="#functions-files-and-tests">Functions, files, and tests</a></li>
+<li><a href="#numpy-and-data-quality">NumPy and data quality</a></li>
+<li><a href="#sql-and-statistics">SQL and statistics</a></li>
+<li><a href="#ml-and-ai">ML and AI</a></li>
+<li><a href="#answering-without-memorizing">Answering without memorizing</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></aside><main><div class="topline"><span>YOUR BEGINNER-TO-BUILDER COURSE · SEPTEMBER 2026</span><button type="button" onclick="window.print()">Print / Save PDF</button></div><h1 id="answer-guide">Answer guide</h1>
+<p>Use this after attempting <code>PRACTICE.html</code>. A different correct approach is welcome. After reading an answer, close this guide and solve a changed version later. For open-ended work, the answer is a set of defensible criteria, not a single magic output.</p>
+<h2 id="python-basics">Python basics</h2>
+<p><strong>1. Receipt:</strong> <code>3 * 12.5 * (1 - 0.10) + 5</code> is <strong>38.75 AED</strong>. Discount the merchandise before adding delivery under the stated rule. <code>print(f"{total:.2f}")</code> formats two decimals.</p>
+<p><strong>2. Minutes:</strong> <code>135 // 60</code> is 2 and <code>135 % 60</code> is 15. For 59: 0 hours, 59 minutes. For 60: 1 hour, 0 minutes.</p>
+<p><strong>3. Conversion:</strong> <code>int(quantity) * float(price)</code> gives <strong>30.0</strong>. Before conversion, <code>quantity * 2</code> gives <code>"44"</code> because multiplying a string by an integer repeats it.</p>
+<p><strong>4. Name:</strong> <code>"  sOMRIt  ".strip().title()</code> gives <code>"Somrit"</code>. The empty string remains empty. Name capitalization in real data is culturally complex; this is a string-method exercise, not a universal identity-cleaning rule.</p>
+<p><strong>5. Outputs:</strong> 14, 20, 3, 1, and <code>"A"</code>. Multiplication precedes addition; parentheses change grouping; floor division and remainder split whole groups from the remainder; indexing starts at zero.</p>
+<p><strong>6. Delivery:</strong></p>
+<pre><code class="language-python">def delivery_fee(spend):
+    if spend &lt; 0:
+        raise ValueError(&quot;spend must be nonnegative&quot;)
+    if spend &gt;= 100:
+        return 0
+    if spend &gt;= 50:
+        return 5
+    return 10
+</code></pre>
+<p>Expected fees for 49, 50, 99, 100: <strong>10, 5, 5, 0</strong>. For external numeric input also validate type and finiteness; <code>NaN</code> does not behave like an ordinary ordered number.</p>
+<p><strong>7. Positive sum:</strong></p>
+<pre><code class="language-python">total = 0
+for value in [12, -3, 0, 8, 5]:
+    if value &gt; 0:
+        total += value
+assert total == 25
+</code></pre>
+<p>An empty list leaves zero. After understanding the loop, <code>sum(x for x in values if x &gt; 0)</code> is a concise alternative.</p>
+<p><strong>8. Grouping:</strong></p>
+<pre><code class="language-python">totals = {}
+for customer, amount in [(&quot;A&quot;, 12), (&quot;B&quot;, 8), (&quot;A&quot;, 15)]:
+    totals[customer] = totals.get(customer, 0) + amount
+assert totals == {&quot;A&quot;: 27, &quot;B&quot;: 8}
+</code></pre>
+<p><strong>9. Unique customers:</strong> <code>unique = set(customers)</code>; <code>len(unique)</code> is <strong>3</strong> and <code>sorted(unique)</code> is <code>["A", "B", "C"]</code>. A set itself does not promise your desired presentation order.</p>
+<p><strong>10. Aliasing:</strong> both <code>a</code> and <code>b</code> become <code>[1, 2, 3]</code>, because they name the same list. <code>b = a.copy()</code> creates a new outer list. If <code>a</code> contains lists, their inner objects still have shared references after a shallow copy.</p>
+<h2 id="functions-files-and-tests">Functions, files, and tests</h2>
+<p><strong>11. Average:</strong></p>
+<pre><code class="language-python">def average(values):
+    if not values:
+        raise ValueError(&quot;average requires at least one value&quot;)
+    return sum(values) / len(values)
+</code></pre>
+<p><code>average([5]) == 5</code> and <code>average([2, 4, 6]) == 4</code>. This contract assumes a numeric list/sequence. Do not silently use zero for the mean of an empty sample.</p>
+<p><strong>12. Discount:</strong> see Notebook 2 for the complete function and tests, including nonfinite inputs. Check both rate boundaries, an empty basket, a negative price, an invalid rate, and a normal calculation. Use approximate equality for nonexact floating-point expectations.</p>
+<p><strong>13. Print versus return:</strong></p>
+<pre><code class="language-python">def wrong(values):
+    print(sum(values))
+
+def correct(values):
+    return sum(values)
+
+result = correct([2, 3])  # 5; wrong([2, 3]) displays 5 but returns None
+</code></pre>
+<p><strong>14. Input parser:</strong></p>
+<pre><code class="language-python">def parse_nonnegative_integer(text):
+    try:
+        value = int(text)
+    except (TypeError, ValueError) as error:
+        raise ValueError(&quot;Enter a whole number as text&quot;) from error
+    if value &lt; 0:
+        raise ValueError(&quot;Enter zero or a positive whole number&quot;)
+    return value
+</code></pre>
+<p>For the stated <strong>text input</strong> contract, <code>"4"</code> and <code>" 4 "</code> give 4; <code>"4.5"</code>, <code>"hello"</code>, and <code>"-1"</code> are rejected. If your API also accepts arbitrary numeric objects, validate types explicitly: <code>int(4.5)</code> would truncate and booleans have integer-like behavior. A parser's contract must match its callers.</p>
+<p><strong>15. CSV project:</strong> there are several valid designs. Require headers; strip categories; convert amounts; reject nonfinite/negative values; retain valid zero; record row numbers and reasons. Reject blank categories under a declared policy. The total of category sums should equal the sum of accepted amounts. Use <code>math.isfinite</code> in addition to numeric conversion because text such as <code>"nan"</code> can parse as a float.</p>
+<p>Suggested architecture:</p>
+<pre><code class="language-text">read_csv(path) → raw records with row numbers
+validate_record(record) → clean record OR reason
+summarize(clean_records) → totals and counts
+write_outputs(summary, rejected) → JSON + CSV
+</code></pre>
+<p>Accept an empty CSV <strong>with the required headers</strong> as zero records and an empty summary. Reject missing headers clearly. A row <code>Food,0</code> is valid; <code>Food,-1</code> is rejected; <code>Food,abc</code> is rejected; <code>Food,12</code> plus <code>Food,15</code> totals 27. The raw file must remain byte-for-byte unchanged. The supplied Notebook 2 teaches the file mechanics; completing this fuller validation project yourself is part of the course.</p>
+<h2 id="numpy-and-data-quality">NumPy and data quality</h2>
+<p><strong>16. Arrays:</strong> <code>np.array([2, 1, 3]) * np.array([10, 25, 8])</code> gives <strong>[20, 25, 24]</strong>, totaling <strong>69</strong>. Python's <code>[2, 1, 3] * 2</code> repeats a list; multiplying one Python list by another is not defined.</p>
+<p><strong>17. Shapes:</strong> <code>(4, 3) @ (3,)</code> gives <code>(4,)</code>. Reducing <code>(4, 3)</code> along axis 0 gives <code>(3,)</code>. A <code>(4,)</code> weight vector has the wrong contracted dimension for this matrix product and raises an error.</p>
+<p><strong>18. Standardization:</strong> column means are <code>[2, 20]</code>, population standard deviations approximately <code>[0.81649658, 8.16496581]</code>, and standardized rows approximately <code>[-1.22474487, -1.22474487]</code>, <code>[0, 0]</code>, <code>[1.22474487, 1.22474487]</code>. Replace a zero scale with 1 under a stated policy, which produces zero for a constant column after mean subtraction. Fitting scales on test data lets held-back information influence the model pipeline.</p>
+<p><strong>19–20. Audit:</strong> the data dictionary and Notebook 4 define the policy. <strong>62 raw = 2 exact duplicates + 4 rejected unique rows + 56 accepted orders.</strong> One missing region remains <code>Unknown</code>. The four rejected unique records have invalid quantity (two records), missing price (one), and invalid date (one). Count rows with any failure, rather than adding overlapping reason counts. If a newly modified file has conflicting repeated IDs, stop and resolve their meaning instead of arbitrarily keeping the first.</p>
+<p><strong>21. Aggregation:</strong> use <code>revenue = units * unit_price</code>, then aggregate valid unique orders by region. Verified totals: <strong>East 1,000 AED / 20 orders; North 1,000 AED / 20 orders; South 775 AED / 15 orders; Unknown 20 AED / 1 order</strong>. Total revenue is <strong>2,795 AED</strong> and average order value is <code>2795/56</code>, approximately <strong>49.91 AED</strong>. A weighted mean of region averages using their order counts equals this; an unweighted mean gives each region equal influence regardless of how many orders it contains. The executed Notebook 4 and <code>outputs/region_summary.csv</code> contain the same values.</p>
+<p><strong>22. Join trap:</strong></p>
+<pre><code class="language-python">orders = pd.DataFrame({&quot;customer&quot;: [&quot;A&quot;], &quot;amount&quot;: [10]})
+customers = pd.DataFrame({&quot;customer&quot;: [&quot;A&quot;, &quot;A&quot;], &quot;tier&quot;: [&quot;Gold&quot;, &quot;Silver&quot;]})
+# Two matches produce two output rows and would double the apparent amount.
+orders.merge(customers, on=&quot;customer&quot;, validate=&quot;many_to_one&quot;)
+# Raises pandas.errors.MergeError: the right key is not unique.
+</code></pre>
+<p>Correct the dimension's meaning upstream. Blindly removing one tier may conceal a time-dependent relationship or data error.</p>
+<h2 id="sql-and-statistics">SQL and statistics</h2>
+<p><strong>23. SQL:</strong> <code>SELECT customer, SUM(amount) AS total FROM orders GROUP BY customer ORDER BY customer;</code> gives A=27, B=8 for exercise 8's data. In pandas: <code>df.groupby("customer", as_index=False)["amount"].sum()</code>. Match column names, order, and numeric types before comparing. Notebook 5 demonstrates parity on a separate six-order table.</p>
+<p><strong>24. NULL:</strong> <code>COUNT(*)</code> includes every row; <code>COUNT(amount)</code> excludes rows where amount is NULL. Filter with <code>WHERE amount IS NULL</code>. Zero is a known numeric value and is counted by both.</p>
+<p><strong>25. Charts:</strong> acceptable work includes a region bar chart with revenue in AED, a sorted daily line chart with dates, and a histogram of order values with labeled bin/count meaning. Check totals against tables. State that the data are synthetic, missing/invalid records were handled under a policy, and the brief period does not establish long-term patterns.</p>
+<p><strong>26. Mean/median:</strong> <strong>32.5 / 10</strong>. The median is the middle-order summary here. Mean × count equals the total of 130.</p>
+<p><strong>27. Rates:</strong> A=<strong>20%</strong>, B=<strong>30%</strong>, difference=<strong>10 percentage points</strong>, relative increase from A=<strong>50%</strong>, pooled rate=<code>32/140</code>=<strong>22.857%</strong>. The pooled rate is not the unweighted mean of 20% and 30% because denominators differ.</p>
+<p><strong>28. Resampling:</strong> rows from the same customer can share behavior. Resampling individual rows may exaggerate the amount of independent information. Resample customers with their observations if customers are the independent sampling unit and that design matches the question. Time dependence or unequal cluster structure can require more careful methods.</p>
+<p><strong>29. Causality:</strong> seasonality, changes in the customer mix, and a simultaneous price/promotion change are plausible alternatives. Consider random assignment of eligible customers to campaign/control, with a predeclared metric, randomization unit, window, and analysis. Assignment spillovers and noncompliance need attention. Observation after an event alone does not identify its effect.</p>
+<h2 id="ml-and-ai">ML and AI</h2>
+<p><strong>30. Leakage:</strong> eventual refund date is unavailable at checkout and encodes future outcome information. Customer fields must use values available then, not a retrospectively updated account state. Scaling before splitting uses information from held-back examples; put learned preprocessing inside training-only fitting/CV pipelines.</p>
+<p><strong>31. Metrics:</strong> define “positive” as the event of interest. Accuracy=<code>(8+86)/100</code>=<strong>94%</strong>; precision=<code>8/10</code>=<strong>80%</strong>; recall=<code>8/12</code>≈<strong>66.67%</strong>; F1=<code>2*8/(2*8+2+4)</code>≈<strong>72.73%</strong>. This classifier misses four of twelve actual positives. Whether that is acceptable depends on consequences, not accuracy alone.</p>
+<p><strong>32. Splits:</strong> (a) train on earlier periods and validate/test on later periods, with a gap when timing/feature windows require it; (b) group by patient so the new-patient test contains different people; (c) random split is sensible for truly independent generated observations. If the intended use is future measurements of existing patients, the design may instead need a time-aware within-patient strategy. State the deployment question first.</p>
+<p><strong>33. Comparison:</strong> a valid answer contains a predeclared hypothesis, same training-side folds, a fixed metric, fold results, and a selection rule. It does not use final test scores to choose settings. No specific model must win; valid methodology is the answer.</p>
+<p><strong>34. Error slice:</strong> show slice definition, size, overall comparison, observed error, and an explicitly tentative explanation. Very small groups support weak conclusions. If final-test errors inspire a change, assess the revision with new appropriate evidence rather than repeatedly optimizing against that test.</p>
+<p><strong>35. Preprocessing:</strong> numeric branch = median imputation, optionally scaling; categorical branch = an explicit missing-category policy and one-hot encoding with an unseen-category policy such as <code>handle_unknown="ignore"</code>. Combine via <code>ColumnTransformer</code> inside a <code>Pipeline</code> with the estimator. Training learns medians, means/scales, category vocabulary, and model parameters; validation/test only receive the learned transformations. Do not assume zero vectors for new categories are always harmless.</p>
+<p><strong>36. Gradient:</strong> next weight=<code>2 - 0.1*3</code>=<strong>1.7</strong>. A negative gradient would increase the weight under this update. The gradient describes local change; a large step can overshoot.</p>
+<p><strong>37. Learning rate:</strong> your evidence should show loss against update count with the same data and initialization. Smaller steps may need more updates; large steps can oscillate/diverge. A particular setting's failure is an observed property of that problem, not a universal rule. Keep parameter choice separate from final test evaluation.</p>
+<p><strong>38. Retrieval:</strong> preserve passage IDs; label relevant evidence before tuning; compute a top-k hit measure over answerable questions; assess missing-answer cases separately. TF-IDF uses term statistics, not a pretrained generative language model. A high score on a small hand-written set is a smoke test, and shared terms can still retrieve irrelevant evidence. A generator needs its own correctness/support assessment.</p>
+<p><strong>39. Handoff:</strong> passing means the documented steps work without your private remembered state. Include versions, inputs, run order, output paths, and common failures. Restarting a notebook and running all cells is necessary, but an actual clean-environment or external-reviewer run is stronger evidence.</p>
+<p><strong>40. Independence:</strong> use the capstone rubric. Expect defensible grain, real checks, a reproducible summary, labeled chart, and either a legitimate prediction plan or a clear explanation that the dataset cannot support one. Do not invent targets, provenance, or numerical claims. Needing syntax documentation is normal; needing someone else to design every step means more practice is needed.</p>
+<h2 id="answering-without-memorizing">Answering without memorizing</h2>
+<p>For every exercise you missed, invent one variant that would break a superficial solution. Examples: empty lists, zero denominators, duplicated lookup keys, future-dated features, or an unanswered question sharing keywords with a passage. Explain the failure before repairing it.</p><div class="meta">Designed for 10–15 hours a week · 160-hour foundation + 40-hour application and career bridge<br>Learn by building, testing, and explaining. Time estimates are planning guides; checkpoints determine progress.</div></main></div></body></html>

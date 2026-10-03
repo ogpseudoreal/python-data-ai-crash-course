@@ -1,0 +1,15 @@
+.venv/
+.course-env/
+.validation/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+*.zip
+
+# Local account settings and personal study schedules
+.env
+.env.*
+!.env.example
+calendar/
+python-data-ai-course/
+publish/

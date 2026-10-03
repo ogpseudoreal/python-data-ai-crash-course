@@ -1,0 +1,55 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A comprehensive beginner Python course for data analytics, machine learning, and AI applications."><title>Start here · Python → Data → AI</title><style>
+:root{--ink:#172c35;--muted:#526770;--teal:#126e7e;--paper:#fcfaf5;--line:#d7e0df;--nav:#eef3f1}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--teal);text-underline-offset:3px}a:hover{color:#093e49}a:focus-visible,button:focus-visible{outline:3px solid #bc5738;outline-offset:3px}
+.brand{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--teal)}.layout{display:grid;grid-template-columns:250px minmax(0,950px);max-width:1240px;margin:auto;gap:44px;padding:38px 30px 80px}
+aside{position:sticky;top:24px;height:calc(100vh - 48px);overflow:auto;padding-right:14px;font-size:13px;line-height:1.5}aside .brand{display:block;padding-bottom:18px;border-bottom:1px solid var(--line)}.navlinks{display:grid;gap:8px;margin:20px 0}.navlinks a{text-decoration:none;padding:7px 10px;border-radius:6px}.navlinks a.current{background:var(--ink);color:white;font-weight:650}.toc{padding-top:18px;border-top:1px solid var(--line)}.toc ul{list-style:none;margin:0;padding:0}.toc>ul>li>a{display:none}.toc li a{display:block;padding:5px 0;text-decoration:none}.toc ul ul{padding:0}.toc ul ul ul{padding-left:12px}.toc li{margin:0}
+main{min-width:0}h1{font-family:Georgia,serif;font-size:52px;line-height:1.09;letter-spacing:-1.6px;margin:28px 0 25px;font-weight:500}h2{font-size:27px;line-height:1.3;margin:55px 0 20px;border-top:1px solid var(--line);padding-top:28px;letter-spacing:-.5px}h3{font-size:20px;line-height:1.4;margin:30px 0 12px}p{margin:15px 0}li{margin:9px 0}strong{font-weight:700}code{font-size:.88em;background:#edf1ef;padding:2px 5px;border-radius:4px;color:#154e59}pre{background:#142d38;color:#edf7f4;padding:22px;border-radius:9px;overflow:auto;line-height:1.65;font-size:14px;margin:24px 0}pre code{background:none;color:inherit;padding:0;font-size:inherit}.tablewrap{overflow:auto;margin:25px 0;border:1px solid var(--line);border-radius:8px}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.55}th{text-align:left;background:#e9efeb;font-weight:700;padding:13px 15px;vertical-align:top}td{padding:13px 15px;border-top:1px solid var(--line);vertical-align:top}tbody tr:nth-child(even){background:#f4f5ef}td:first-child{font-weight:550}blockquote{border-left:4px solid var(--teal);margin:24px 0;padding:2px 22px;background:var(--nav)}.topline{display:flex;justify-content:space-between;gap:20px;align-items:center}.topline span{font-size:12px;color:var(--muted);letter-spacing:.6px}.topline button{border:1px solid var(--line);border-radius:6px;padding:8px 12px;background:transparent;color:var(--muted);cursor:pointer}.meta{color:var(--muted);font-size:13px;margin:35px 0;padding-top:20px;border-top:1px solid var(--line)}.output{background:#eef3ef;color:#263f47;border-left:3px solid #147d92;white-space:pre-wrap;word-break:break-word}.cell-label{font:11px/1.5 system-ui;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin:24px 0 -15px}.plot{display:block;max-width:100%;height:auto;margin:25px auto;border-radius:8px;background:white}details{border:1px solid var(--line);border-radius:6px;padding:12px 16px;margin:18px 0}summary{cursor:pointer;font-weight:600}
+@media(max-width:950px){.layout{grid-template-columns:190px minmax(0,1fr);gap:25px;padding:25px 20px}h1{font-size:43px}}
+@media(max-width:700px){.layout{display:block;padding:20px 18px 50px}aside{position:static;height:auto;padding:0;margin-bottom:30px}.navlinks{grid-template-columns:1fr 1fr;gap:3px}.toc{display:none}h1{font-size:39px}h2{font-size:25px}body{font-size:16px}.topline{flex-wrap:wrap}th,td{min-width:110px}pre{padding:16px;font-size:13px}}
+@media print{body{background:white;font:11pt/1.5 Georgia,serif;color:#111}.layout{display:block;padding:0;max-width:none}aside,.topline button{display:none}h1{font-size:30pt}h2{font-size:20pt;break-before:page}h3{font-size:14pt}pre{white-space:pre-wrap;background:#f2f2f2;color:#111;border:1px solid #ddd;break-inside:avoid;font-size:9pt}table{font-size:9pt}.tablewrap{overflow:visible}tr{break-inside:avoid}a{color:#111;text-decoration:underline}.plot{max-height:7in;object-fit:contain}.meta{font-size:9pt}}
+</style></head><body><div class="layout"><aside><a class="brand" href="index.html">Python / Data / AI</a><nav class="navlinks" aria-label="Course materials"><a class="current" href="index.html">Start here</a><a class="" href="COURSE.html">Course handbook</a><a class="" href="BRIDGE.html">AI apps & career</a><a class="" href="PRACTICE.html">40 exercises</a><a class="" href="GLOSSARY.html">Glossary</a><a class="" href="SOURCES.html">Resource evaluation</a><a class="" href="PROGRESS.html">Progress tracker</a><a class="" href="SOLUTIONS.html">Answer guide</a><a class="" href="VALIDATION.html">Verification</a><a href="LABS.html">Notebook reading room</a></nav><nav aria-label="Page contents"><div class="toc">
+<ul>
+<li><a href="#python-data-ai">Python → Data → AI</a><ul>
+<li><a href="#your-materials">Your materials</a></li>
+<li><a href="#read-in-your-browser">Read in your browser</a></li>
+<li><a href="#first-30-minutes">First 30 minutes</a></li>
+<li><a href="#working-folder">Working folder</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></aside><main><div class="topline"><span>YOUR BEGINNER-TO-BUILDER COURSE · SEPTEMBER 2026</span><button type="button" onclick="window.print()">Print / Save PDF</button></div><h1 id="python-data-ai">Python → Data → AI</h1>
+<p>A practical crash course for a complete beginner. Created 5 September 2026.</p>
+<p><strong>Start with <a href="COURSE.html">the course handbook</a>.</strong></p>
+<p>Your complete plan is <strong>200 focused hours</strong>: a 160-hour Python/data/ML foundation plus a 40-hour AI application and career bridge. At your chosen <strong>10–15 hours a week</strong>, budget roughly <strong>14–20 weeks</strong> for the planned work. Allow 220–260 hours if checkpoints need more practice. The course builds on your Excel and basic algebra knowledge and addresses all three of your goals. It establishes independent project skills and career foundations; it does not guarantee job readiness or expert ML practice.</p>
+<h2 id="your-materials">Your materials</h2>
+<ul>
+<li><a href="COURSE.html">Course handbook</a>: setup, teaching notes, learning sequence, worked examples, projects, and assessments.</li>
+<li><a href="BRIDGE.html">AI application and career bridge</a>: model-serving, pretrained-model and document-assistant projects, evaluation, and portfolio preparation.</li>
+<li><a href="SOURCES.html">Resource evaluation</a>: which resources to use, substitute, or postpone, and why.</li>
+<li><a href="GLOSSARY.html">Glossary</a>: plain English definitions, grouped for lookup.</li>
+<li><a href="PRACTICE.html">Practice workbook</a>: 40 exercises; attempt these before opening the answers.</li>
+<li><a href="SOLUTIONS.html">Answer guide</a>: solutions, explanations, and assessment criteria.</li>
+<li><code>notebooks/</code>: eight guided, executable Python notebooks with practice prompts.</li>
+<li><a href="notebooks/">Notebook files</a>: GitHub previews the saved code and outputs. Download the repository and open <code>LABS.html</code> for the styled reading room.</li>
+<li><code>data/</code>: synthetic retail practice data and its data dictionary.</li>
+<li><a href="PROGRESS.html">Progress tracker</a>: module checklist and practice log.</li>
+<li><a href="VALIDATION.html">Validation record</a>: execution status and exact tested versions.</li>
+<li><a href="PACKAGE_NOTES.md">Package notes</a>: offline reading, maintainer utilities, and verification scope.</li>
+<li><code>requirements.txt</code>: the direct library versions used for the verified course examples.</li>
+</ul>
+<h2 id="read-in-your-browser">Read in your browser</h2>
+<p>On GitHub, use the Markdown links above. For the styled handbook, download the repository with <strong>Code → Download ZIP</strong>, extract it, and open <code>index.html</code>. All eight notebook reading previews are included.</p>
+<p>This repository is also ready for GitHub Pages; see <a href="PUBLISHING.md">publishing instructions</a>.</p>
+<h2 id="first-30-minutes">First 30 minutes</h2>
+<ol>
+<li>Open the handbook, read the learning contract, and do Module 0.</li>
+<li>Create <code>hello.py</code>, run it, change a value, and run it again.</li>
+<li>Begin Module 1. Stop reading after each example and type it yourself.</li>
+</ol>
+<p>Use external links only when assigned or when an explanation is not clicking. The handbook and labs are your main path. No paid certificate, AI API, or GPU is needed for the supplied labs. External courses retain their own access terms. The 40-hour bridge includes your own real-model integrations; those applications are assignments to build, not completed apps bundled here.</p>
+<h2 id="working-folder">Working folder</h2>
+<p>Open this entire folder in VS Code, not an individual notebook alone. After following the environment setup in Module 0, select your <code>.venv</code> interpreter and select the same environment as the notebook kernel. Run notebooks in numerical order. Each notebook is self-contained except that Notebook 4 loads the included <code>data/orders.csv</code>.</p>
+<p>The hidden <code>.course-env</code> folder, if present in the working copy, was used to validate these materials. It is not included in the downloadable course ZIP. Create your own <code>.venv</code> to learn the setup process.</p>
+<p>Research scope: a curated comparison of authoritative course and documentation sources, checked on 5 September 2026. It is not possible to evaluate every resource on the internet. Selection judgments and time estimates are the course designer's recommendations; they are not measured rankings or learning guarantees.</p><div class="meta">Designed for 10–15 hours a week · 160-hour foundation + 40-hour application and career bridge<br>Learn by building, testing, and explaining. Time estimates are planning guides; checkpoints determine progress.</div></main></div></body></html>

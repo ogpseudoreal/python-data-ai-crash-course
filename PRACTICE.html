@@ -1,0 +1,83 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A comprehensive beginner Python course for data analytics, machine learning, and AI applications."><title>40 exercises · Python → Data → AI</title><style>
+:root{--ink:#172c35;--muted:#526770;--teal:#126e7e;--paper:#fcfaf5;--line:#d7e0df;--nav:#eef3f1}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--teal);text-underline-offset:3px}a:hover{color:#093e49}a:focus-visible,button:focus-visible{outline:3px solid #bc5738;outline-offset:3px}
+.brand{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--teal)}.layout{display:grid;grid-template-columns:250px minmax(0,950px);max-width:1240px;margin:auto;gap:44px;padding:38px 30px 80px}
+aside{position:sticky;top:24px;height:calc(100vh - 48px);overflow:auto;padding-right:14px;font-size:13px;line-height:1.5}aside .brand{display:block;padding-bottom:18px;border-bottom:1px solid var(--line)}.navlinks{display:grid;gap:8px;margin:20px 0}.navlinks a{text-decoration:none;padding:7px 10px;border-radius:6px}.navlinks a.current{background:var(--ink);color:white;font-weight:650}.toc{padding-top:18px;border-top:1px solid var(--line)}.toc ul{list-style:none;margin:0;padding:0}.toc>ul>li>a{display:none}.toc li a{display:block;padding:5px 0;text-decoration:none}.toc ul ul{padding:0}.toc ul ul ul{padding-left:12px}.toc li{margin:0}
+main{min-width:0}h1{font-family:Georgia,serif;font-size:52px;line-height:1.09;letter-spacing:-1.6px;margin:28px 0 25px;font-weight:500}h2{font-size:27px;line-height:1.3;margin:55px 0 20px;border-top:1px solid var(--line);padding-top:28px;letter-spacing:-.5px}h3{font-size:20px;line-height:1.4;margin:30px 0 12px}p{margin:15px 0}li{margin:9px 0}strong{font-weight:700}code{font-size:.88em;background:#edf1ef;padding:2px 5px;border-radius:4px;color:#154e59}pre{background:#142d38;color:#edf7f4;padding:22px;border-radius:9px;overflow:auto;line-height:1.65;font-size:14px;margin:24px 0}pre code{background:none;color:inherit;padding:0;font-size:inherit}.tablewrap{overflow:auto;margin:25px 0;border:1px solid var(--line);border-radius:8px}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.55}th{text-align:left;background:#e9efeb;font-weight:700;padding:13px 15px;vertical-align:top}td{padding:13px 15px;border-top:1px solid var(--line);vertical-align:top}tbody tr:nth-child(even){background:#f4f5ef}td:first-child{font-weight:550}blockquote{border-left:4px solid var(--teal);margin:24px 0;padding:2px 22px;background:var(--nav)}.topline{display:flex;justify-content:space-between;gap:20px;align-items:center}.topline span{font-size:12px;color:var(--muted);letter-spacing:.6px}.topline button{border:1px solid var(--line);border-radius:6px;padding:8px 12px;background:transparent;color:var(--muted);cursor:pointer}.meta{color:var(--muted);font-size:13px;margin:35px 0;padding-top:20px;border-top:1px solid var(--line)}.output{background:#eef3ef;color:#263f47;border-left:3px solid #147d92;white-space:pre-wrap;word-break:break-word}.cell-label{font:11px/1.5 system-ui;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin:24px 0 -15px}.plot{display:block;max-width:100%;height:auto;margin:25px auto;border-radius:8px;background:white}details{border:1px solid var(--line);border-radius:6px;padding:12px 16px;margin:18px 0}summary{cursor:pointer;font-weight:600}
+@media(max-width:950px){.layout{grid-template-columns:190px minmax(0,1fr);gap:25px;padding:25px 20px}h1{font-size:43px}}
+@media(max-width:700px){.layout{display:block;padding:20px 18px 50px}aside{position:static;height:auto;padding:0;margin-bottom:30px}.navlinks{grid-template-columns:1fr 1fr;gap:3px}.toc{display:none}h1{font-size:39px}h2{font-size:25px}body{font-size:16px}.topline{flex-wrap:wrap}th,td{min-width:110px}pre{padding:16px;font-size:13px}}
+@media print{body{background:white;font:11pt/1.5 Georgia,serif;color:#111}.layout{display:block;padding:0;max-width:none}aside,.topline button{display:none}h1{font-size:30pt}h2{font-size:20pt;break-before:page}h3{font-size:14pt}pre{white-space:pre-wrap;background:#f2f2f2;color:#111;border:1px solid #ddd;break-inside:avoid;font-size:9pt}table{font-size:9pt}.tablewrap{overflow:visible}tr{break-inside:avoid}a{color:#111;text-decoration:underline}.plot{max-height:7in;object-fit:contain}.meta{font-size:9pt}}
+</style></head><body><div class="layout"><aside><a class="brand" href="index.html">Python / Data / AI</a><nav class="navlinks" aria-label="Course materials"><a class="" href="index.html">Start here</a><a class="" href="COURSE.html">Course handbook</a><a class="" href="BRIDGE.html">AI apps & career</a><a class="current" href="PRACTICE.html">40 exercises</a><a class="" href="GLOSSARY.html">Glossary</a><a class="" href="SOURCES.html">Resource evaluation</a><a class="" href="PROGRESS.html">Progress tracker</a><a class="" href="SOLUTIONS.html">Answer guide</a><a class="" href="VALIDATION.html">Verification</a><a href="LABS.html">Notebook reading room</a></nav><nav aria-label="Page contents"><div class="toc">
+<ul>
+<li><a href="#practice-workbook-40-exercises">Practice workbook — 40 exercises</a><ul>
+<li><a href="#python-basics-modules-12">Python basics — Modules 1–2</a></li>
+<li><a href="#reusable-python-modules-34">Reusable Python — Modules 3–4</a></li>
+<li><a href="#arrays-and-data-modules-57">Arrays and data — Modules 5–7</a></li>
+<li><a href="#statistics-and-ml-modules-810">Statistics and ML — Modules 8–10</a></li>
+<li><a href="#ai-and-independence-modules-1114">AI and independence — Modules 11–14</a></li>
+<li><a href="#weekly-reflection">Weekly reflection</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></aside><main><div class="topline"><span>YOUR BEGINNER-TO-BUILDER COURSE · SEPTEMBER 2026</span><button type="button" onclick="window.print()">Print / Save PDF</button></div><h1 id="practice-workbook-40-exercises">Practice workbook — 40 exercises</h1>
+<p>Work in a new notebook or <code>.py</code> file. Read the relevant module first. For each exercise write expected outputs before running code, test an edge case, and explain the solution aloud. Solutions are in <code>SOLUTIONS.html</code>; open them only after a serious attempt. Documentation is allowed. Generated solutions are not allowed for checkpoints.</p>
+<p>Suggested standard: an exercise passes when the code works on the example and a different input, and you can explain its behavior. A correct answer copied from the guide does not pass until you can solve a new variant the following day.</p>
+<h2 id="python-basics-modules-12">Python basics — Modules 1–2</h2>
+<ol>
+<li><strong>Receipt.</strong> Three items cost 12.50 each. Apply a 10% discount, then add a 5 AED delivery fee. Display the result to two decimals. Change the quantity and recompute.</li>
+<li><strong>Minutes.</strong> Convert 135 minutes into whole hours and remaining minutes. What changes for 59 and 60?</li>
+<li><strong>Text conversion.</strong> Given <code>quantity = "4"</code> and <code>price = "7.5"</code>, calculate a numeric total. Explain the effect of <code>quantity * 2</code> before converting it.</li>
+<li><strong>Clean a name.</strong> Transform <code>"  sOMRIt  "</code> into <code>"Somrit"</code>. What happens for an empty string?</li>
+<li><strong>Predict first.</strong> Predict <code>2 + 3 * 4</code>, <code>(2 + 3) * 4</code>, <code>7 // 2</code>, <code>7 % 2</code>, and <code>"AI"[0]</code>. Explain each.</li>
+<li><strong>Delivery rule.</strong> Charge 10 below 50, 5 from 50 up to 99.99, and 0 from 100 onward. Test 49, 50, 99, and 100. Reject negative spend.</li>
+<li><strong>Filter and sum.</strong> Sum only positive values from <code>[12, -3, 0, 8, 5]</code>, using a loop first. Try an empty list.</li>
+<li><strong>Group orders.</strong> For <code>[("A", 12), ("B", 8), ("A", 15)]</code>, return total spend by customer without pandas.</li>
+<li><strong>Unique customers.</strong> Given <code>["A", "B", "A", "C", "B"]</code>, count unique customers. Produce an alphabetically sorted list of them.</li>
+<li><strong>Aliasing bug.</strong> Predict what happens after <code>a = [1, 2]; b = a; b.append(3)</code>. Then create an independent shallow copy and explain its limit with nested lists.</li>
+</ol>
+<h2 id="reusable-python-modules-34">Reusable Python — Modules 3–4</h2>
+<ol start="11">
+<li><strong>Safe average.</strong> Write <code>average(values)</code> returning the arithmetic mean. For empty input raise <code>ValueError</code>. Test one value and several values.</li>
+<li><strong>Discount function.</strong> Implement <code>discounted_total(prices, rate)</code> with rate constrained to 0–1 and nonnegative prices. Test valid, empty, and invalid cases.</li>
+<li><strong>Return bug.</strong> A function computes a sum and prints it, but assigning its result gives <code>None</code>. Write and repair a minimal example.</li>
+<li><strong>Input parser.</strong> Write a function that converts text to a nonnegative integer. Reject negative, fractional, and nonnumeric input. Catch only expected conversion exceptions.</li>
+<li><strong>CSV mini-project.</strong> Read a CSV with <code>category,amount</code>; total by category; reject malformed/negative amounts with a recorded reason; write a JSON summary and a rejected-row CSV. Preserve the raw file. Add tests for empty input, missing headers, malformed amount, valid zero, and two rows in one category.</li>
+</ol>
+<h2 id="arrays-and-data-modules-57">Arrays and data — Modules 5–7</h2>
+<ol start="16">
+<li><strong>Arrays.</strong> Multiply quantities <code>[2, 1, 3]</code> by prices <code>[10, 25, 8]</code>. Explain why Python-list multiplication is different from NumPy elementwise multiplication.</li>
+<li><strong>Shapes.</strong> For <code>X.shape == (4, 3)</code> and <code>w.shape == (3,)</code>, predict <code>(X @ w).shape</code> and <code>X.mean(axis=0).shape</code>. What goes wrong if <code>w.shape == (4,)</code>?</li>
+<li><strong>Standardize.</strong> Standardize columns <code>[[1, 10], [2, 20], [3, 30]]</code> using their population means and standard deviations. Explain how you would handle a constant column and why test-set scaling must use training statistics.</li>
+<li><strong>Quality audit.</strong> Inspect <code>data/orders.csv</code>. Identify grain, duplicates, missing/invalid quantities and prices, invalid dates, and inconsistent regions. Write the policy before deleting anything.</li>
+<li><strong>Clean and reconcile.</strong> Apply Notebook 4's stated cleaning policy. Show raw = duplicate + rejected + clean rows, with categories counted without overlap. Do not count one rejected row twice in that reconciliation.</li>
+<li><strong>Aggregation.</strong> Compute revenue by region and average order value from the valid unique orders. Include counts and units. Explain why averaging region averages without weights is wrong.</li>
+<li><strong>Join trap.</strong> Create an orders table with customer A once and a customer table with A twice. Merge them. Explain the row inflation and make the merge reject the unexpected cardinality.</li>
+<li><strong>SQL parity.</strong> Write a SQL total by customer for the three orders in exercise 8. Reproduce it in pandas and compare the result.</li>
+<li><strong>NULL.</strong> Explain the difference between <code>COUNT(*)</code> and <code>COUNT(amount)</code> when an amount is null. Write the SQL filter for missing amounts.</li>
+<li><strong>Charts.</strong> Build a category bar chart, a chronological daily-revenue line chart, and an order-value histogram from the clean data. Give each a question, units, and a bounded finding.</li>
+</ol>
+<h2 id="statistics-and-ml-modules-810">Statistics and ML — Modules 8–10</h2>
+<ol start="26">
+<li><strong>Mean and median.</strong> Calculate both for <code>[10, 10, 10, 100]</code>. Which better describes the middle order? Which reconciles total spending?</li>
+<li><strong>Rate comparison.</strong> A has 20 conversions out of 100 visitors; B has 12 out of 40. Calculate both rates, percentage-point difference, relative increase from A, and the pooled conversion rate.</li>
+<li><strong>Uncertainty.</strong> Explain why a bootstrap over individual rows may be misleading when each customer has 20 correlated observations. Suggest a more suitable resampling unit.</li>
+<li><strong>Causality.</strong> Sales increased after a campaign. Give three alternative explanations and describe a better study design.</li>
+<li><strong>Leakage review.</strong> You predict whether an order will be refunded at checkout. Candidate fields: order value, checkout time, eventual refund date, customer information available then. Identify illegitimate information. Explain why scaling before splitting is also a problem.</li>
+<li><strong>Metric arithmetic.</strong> A classifier produces TP=8, FP=2, FN=4, TN=86. Compute accuracy, precision, recall, and F1. State the positive class before interpreting the metrics.</li>
+<li><strong>Split design.</strong> Pick splits for (a) next-month demand, (b) new-patient classification with repeated measurements, (c) independent generated observations. Explain the intended future use in each.</li>
+<li><strong>Model comparison.</strong> In Notebook 6, use only training data and the same CV folds to compare a new regularization setting. Record your hypothesis before running. Do not use the final test score to choose the setting.</li>
+<li><strong>Error slice.</strong> Choose a meaningful training-validation slice. Report its size, error, and one plausible explanation. Explain why a tiny slice is uncertain and why a plausible explanation is not proof.</li>
+<li><strong>Preprocessing.</strong> Describe a pipeline for numeric and categorical inputs with missing values and previously unseen categories. Identify which quantities are learned from training data.</li>
+</ol>
+<h2 id="ai-and-independence-modules-1114">AI and independence — Modules 11–14</h2>
+<ol start="36">
+<li><strong>Gradient step.</strong> Given <code>w=2</code>, <code>dL/dw=3</code>, and learning rate <code>0.1</code>, calculate the next weight. Explain the direction. What changes if the gradient is negative?</li>
+<li><strong>Training loop.</strong> Change Notebook 7's learning rate using training-side evidence. Show one slower setting and, if possible, one unstable setting. Compare losses without changing the test set or choosing settings from it.</li>
+<li><strong>Retrieval.</strong> Add three documents and five questions to Notebook 8. Mark which questions are answerable. Evaluate ranked evidence and behavior on missing-answer cases. Explain why TF-IDF search is not an LLM.</li>
+<li><strong>Handoff.</strong> Give your project folder to a reviewer, or simulate a fresh environment. They must follow only the README. Record every missing assumption and fix the instructions.</li>
+<li><strong>Final independence challenge.</strong> In 90 minutes with documentation but no generated solutions: inspect an unfamiliar CSV; state grain and three risks; write a tested summary function; produce a justified chart; propose a valid prediction target/split/baseline if the data permit. Explain what cannot be inferred. Use the capstone rubric for the larger final project.</li>
+</ol>
+<h2 id="weekly-reflection">Weekly reflection</h2>
+<p>Record: what you can now do without hints, the most instructive error, a concept you can explain with an Excel analogy, a weak area to revisit, and next week's concrete output. Count completed independent tasks, not videos watched.</p><div class="meta">Designed for 10–15 hours a week · 160-hour foundation + 40-hour application and career bridge<br>Learn by building, testing, and explaining. Time estimates are planning guides; checkpoints determine progress.</div></main></div></body></html>

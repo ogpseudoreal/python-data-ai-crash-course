@@ -1,0 +1,99 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A comprehensive beginner Python course for data analytics, machine learning, and AI applications."><title>08 text retrieval and ai evaluation · Python → Data → AI</title><style>
+:root{--ink:#172c35;--muted:#526770;--teal:#126e7e;--paper:#fcfaf5;--line:#d7e0df;--nav:#eef3f1}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--teal);text-underline-offset:3px}a:hover{color:#093e49}a:focus-visible,button:focus-visible{outline:3px solid #bc5738;outline-offset:3px}
+.brand{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--teal)}.layout{display:grid;grid-template-columns:250px minmax(0,950px);max-width:1240px;margin:auto;gap:44px;padding:38px 30px 80px}
+aside{position:sticky;top:24px;height:calc(100vh - 48px);overflow:auto;padding-right:14px;font-size:13px;line-height:1.5}aside .brand{display:block;padding-bottom:18px;border-bottom:1px solid var(--line)}.navlinks{display:grid;gap:8px;margin:20px 0}.navlinks a{text-decoration:none;padding:7px 10px;border-radius:6px}.navlinks a.current{background:var(--ink);color:white;font-weight:650}.toc{padding-top:18px;border-top:1px solid var(--line)}.toc ul{list-style:none;margin:0;padding:0}.toc>ul>li>a{display:none}.toc li a{display:block;padding:5px 0;text-decoration:none}.toc ul ul{padding:0}.toc ul ul ul{padding-left:12px}.toc li{margin:0}
+main{min-width:0}h1{font-family:Georgia,serif;font-size:52px;line-height:1.09;letter-spacing:-1.6px;margin:28px 0 25px;font-weight:500}h2{font-size:27px;line-height:1.3;margin:55px 0 20px;border-top:1px solid var(--line);padding-top:28px;letter-spacing:-.5px}h3{font-size:20px;line-height:1.4;margin:30px 0 12px}p{margin:15px 0}li{margin:9px 0}strong{font-weight:700}code{font-size:.88em;background:#edf1ef;padding:2px 5px;border-radius:4px;color:#154e59}pre{background:#142d38;color:#edf7f4;padding:22px;border-radius:9px;overflow:auto;line-height:1.65;font-size:14px;margin:24px 0}pre code{background:none;color:inherit;padding:0;font-size:inherit}.tablewrap{overflow:auto;margin:25px 0;border:1px solid var(--line);border-radius:8px}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.55}th{text-align:left;background:#e9efeb;font-weight:700;padding:13px 15px;vertical-align:top}td{padding:13px 15px;border-top:1px solid var(--line);vertical-align:top}tbody tr:nth-child(even){background:#f4f5ef}td:first-child{font-weight:550}blockquote{border-left:4px solid var(--teal);margin:24px 0;padding:2px 22px;background:var(--nav)}.topline{display:flex;justify-content:space-between;gap:20px;align-items:center}.topline span{font-size:12px;color:var(--muted);letter-spacing:.6px}.topline button{border:1px solid var(--line);border-radius:6px;padding:8px 12px;background:transparent;color:var(--muted);cursor:pointer}.meta{color:var(--muted);font-size:13px;margin:35px 0;padding-top:20px;border-top:1px solid var(--line)}.output{background:#eef3ef;color:#263f47;border-left:3px solid #147d92;white-space:pre-wrap;word-break:break-word}.cell-label{font:11px/1.5 system-ui;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin:24px 0 -15px}.plot{display:block;max-width:100%;height:auto;margin:25px auto;border-radius:8px;background:white}details{border:1px solid var(--line);border-radius:6px;padding:12px 16px;margin:18px 0}summary{cursor:pointer;font-weight:600}
+@media(max-width:950px){.layout{grid-template-columns:190px minmax(0,1fr);gap:25px;padding:25px 20px}h1{font-size:43px}}
+@media(max-width:700px){.layout{display:block;padding:20px 18px 50px}aside{position:static;height:auto;padding:0;margin-bottom:30px}.navlinks{grid-template-columns:1fr 1fr;gap:3px}.toc{display:none}h1{font-size:39px}h2{font-size:25px}body{font-size:16px}.topline{flex-wrap:wrap}th,td{min-width:110px}pre{padding:16px;font-size:13px}}
+@media print{body{background:white;font:11pt/1.5 Georgia,serif;color:#111}.layout{display:block;padding:0;max-width:none}aside,.topline button{display:none}h1{font-size:30pt}h2{font-size:20pt;break-before:page}h3{font-size:14pt}pre{white-space:pre-wrap;background:#f2f2f2;color:#111;border:1px solid #ddd;break-inside:avoid;font-size:9pt}table{font-size:9pt}.tablewrap{overflow:visible}tr{break-inside:avoid}a{color:#111;text-decoration:underline}.plot{max-height:7in;object-fit:contain}.meta{font-size:9pt}}
+</style></head><body><div class="layout"><aside><a class="brand" href="../index.html">Python / Data / AI</a><nav class="navlinks" aria-label="Course materials"><a class="" href="../index.html">Start here</a><a class="" href="../COURSE.html">Course handbook</a><a class="" href="../BRIDGE.html">AI apps & career</a><a class="" href="../PRACTICE.html">40 exercises</a><a class="" href="../GLOSSARY.html">Glossary</a><a class="" href="../SOURCES.html">Resource evaluation</a><a class="" href="../PROGRESS.html">Progress tracker</a><a class="" href="../SOLUTIONS.html">Answer guide</a><a class="" href="../VALIDATION.html">Verification</a><a href="../LABS.html">Notebook reading room</a></nav><nav aria-label="Page contents"></nav></aside><main><div class="topline"><span>YOUR BEGINNER-TO-BUILDER COURSE · SEPTEMBER 2026</span><button type="button" onclick="window.print()">Print / Save PDF</button></div><p><a href="../notebooks/08_text_retrieval_and_ai_evaluation.ipynb" download>Download executable notebook</a> · This page is a reading preview of the notebook and its saved outputs.</p><h1 id="8-build-and-evaluate-a-tiny-search-system">8. Build and evaluate a tiny search system</h1>
+<h2 id="goal">Goal</h2>
+<p>Represent text numerically, retrieve source passages, and separate evidence retrieval from answer generation.
+Course Module 12. The six documents and evaluation queries below are invented. There is no LLM, API request, or generated answer in this notebook.</p>
+<h2 id="setup">Setup</h2>
+<p>Uses scikit-learn and NumPy. The collection is a fixed search corpus; fitting its TF-IDF vocabulary is indexing available documents, not fitting on held-back question labels.
+Reference: <a href="https://huggingface.co/learn/llm-course/chapter1/1">Hugging Face course</a> for the subsequent language-model concepts.</p>
+<h2 id="steps">Steps</h2>
+<h3 id="1-index-the-documents">1. Index the documents</h3>
+<div class="cell-label">Python cell</div><pre><code>import numpy as np
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
+documents = {
+    &quot;refunds&quot;: &quot;Refunds are returned to the original payment method within seven business days.&quot;,
+    &quot;delivery&quot;: &quot;Standard delivery takes three days. Express delivery arrives the next day.&quot;,
+    &quot;hours&quot;: &quot;Customer support hours are Monday to Friday from nine to five.&quot;,
+    &quot;password&quot;: &quot;Reset your password using the account settings page and your email address.&quot;,
+    &quot;cancellation&quot;: &quot;Cancel an order before dispatch by contacting customer support.&quot;,
+    &quot;privacy&quot;: &quot;Export or delete your account data from the privacy settings page.&quot;,
+}
+ids = list(documents)
+vectorizer = TfidfVectorizer(stop_words=&quot;english&quot;)
+document_vectors = vectorizer.fit_transform(documents.values())
+print(&quot;Document-term matrix shape:&quot;, document_vectors.shape)</code></pre>
+<pre class="output">Document-term matrix shape: (6, 35)
+</pre>
+<h3 id="2-return-evidence-with-a-bounded-fallback">2. Return evidence with a bounded fallback</h3>
+<p>A zero-overlap fallback is simple and incomplete: nonzero similarity does not prove that a question is answerable.</p>
+<div class="cell-label">Python cell</div><pre><code>def retrieve(question, k=2):
+    if not isinstance(question, str) or not question.strip():
+        return []
+    query_vector = vectorizer.transform([question])
+    scores = cosine_similarity(query_vector, document_vectors).ravel()
+    ranked = np.argsort(-scores)
+    return [{&quot;id&quot;: ids[i], &quot;score&quot;: float(scores[i]), &quot;text&quot;: documents[ids[i]]}
+            for i in ranked[:k] if scores[i] &gt; 0]
+
+for hit in retrieve(&quot;How long do refunds take?&quot;):
+    print(hit)
+assert retrieve(&quot;How long do refunds take?&quot;)[0][&quot;id&quot;] == &quot;refunds&quot;
+assert retrieve(&quot;&quot;) == []</code></pre>
+<pre class="output">{&#x27;id&#x27;: &#x27;refunds&#x27;, &#x27;score&#x27;: 0.3610220414609507, &#x27;text&#x27;: &#x27;Refunds are returned to the original payment method within seven business days.&#x27;}
+</pre>
+<h3 id="3-evaluate-a-fixed-small-question-set">3. Evaluate a fixed small question set</h3>
+<p>For each answerable query, one relevant document is labeled. Hit@k asks whether it appears among the top k. With one relevant document per query here, this is also recall@k. The tiny hand-authored set is a smoke test, not a reliable estimate of production quality.</p>
+<div class="cell-label">Python cell</div><pre><code>evaluation = [
+    (&quot;When will refunds arrive?&quot;, &quot;refunds&quot;),
+    (&quot;How fast is express delivery?&quot;, &quot;delivery&quot;),
+    (&quot;What are customer support hours?&quot;, &quot;hours&quot;),
+    (&quot;How do I reset my password?&quot;, &quot;password&quot;),
+    (&quot;Can I cancel before dispatch?&quot;, &quot;cancellation&quot;),
+    (&quot;How can I delete my account data?&quot;, &quot;privacy&quot;),
+]
+top1, top2 = [], []
+for question, relevant_id in evaluation:
+    found = [hit[&quot;id&quot;] for hit in retrieve(question)]
+    top1.append(relevant_id in found[:1])
+    top2.append(relevant_id in found[:2])
+    print(question, &quot;→&quot;, found, &quot;expected:&quot;, relevant_id)
+print(f&quot;Hit@1: {np.mean(top1):.1%}; Hit@2: {np.mean(top2):.1%}&quot;)
+assert all(isinstance(value, bool) for value in top1)</code></pre>
+<pre class="output">When will refunds arrive? → [&#x27;refunds&#x27;] expected: refunds
+How fast is express delivery? → [&#x27;delivery&#x27;] expected: delivery
+What are customer support hours? → [&#x27;hours&#x27;, &#x27;cancellation&#x27;] expected: hours
+How do I reset my password? → [&#x27;password&#x27;] expected: password
+Can I cancel before dispatch? → [&#x27;cancellation&#x27;] expected: cancellation
+How can I delete my account data? → [&#x27;privacy&#x27;, &#x27;password&#x27;] expected: privacy
+Hit@1: 100.0%; Hit@2: 100.0%
+</pre>
+<h3 id="4-find-a-failure-that-a-good-looking-score-hides">4. Find a failure that a good-looking score hides</h3>
+<p>Both questions below are outside the corpus. Shared vocabulary can still retrieve a passage.</p>
+<div class="cell-label">Python cell</div><pre><code>unknown_questions = [&quot;What is the capital of Peru?&quot;, &quot;Do refunds include a cryptocurrency bonus?&quot;]
+for question in unknown_questions:
+    hits = retrieve(question)
+    print(question, &quot;→&quot;, [hit[&quot;id&quot;] for hit in hits] or &quot;No matching terms&quot;)
+print(&quot;A retrieved refund policy does not answer whether cryptocurrency bonuses exist.&quot;)
+print(&quot;Singular/plural mismatch:&quot;, retrieve(&quot;How long does a refund take?&quot;))
+print(&quot;Without stemming, refund and refunds are different terms, so evidence can be missed.&quot;)</code></pre>
+<pre class="output">What is the capital of Peru? → No matching terms
+Do refunds include a cryptocurrency bonus? → [&#x27;refunds&#x27;]
+A retrieved refund policy does not answer whether cryptocurrency bonuses exist.
+Singular/plural mismatch: []
+Without stemming, refund and refunds are different terms, so evidence can be missed.
+</pre>
+<h2 id="checks">Checks</h2>
+<p>Explain why the system has not answered the question merely by retrieving a passage. Explain the difference between lexical TF-IDF and a learned embedding, and between indexing documents and training a generator. The deliberately irrelevant 'refunds' question exposes the weakness of the fallback even if the answerable-query score is high.</p>
+<h2 id="next-steps">Next Steps</h2>
+<p>Complete exercise 38. Write five new questions before changing the retriever. Add ambiguous and unsupported cases. The 40-hour bridge then requires a real pretrained model and a document assistant with separately measured retrieval, correctness, evidence support, latency, and optional provider cost.</p><div class="meta">Designed for 10–15 hours a week · 160-hour foundation + 40-hour application and career bridge<br>Learn by building, testing, and explaining. Time estimates are planning guides; checkpoints determine progress.</div></main></div></body></html>

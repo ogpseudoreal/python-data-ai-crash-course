@@ -1,0 +1,97 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A comprehensive beginner Python course for data analytics, machine learning, and AI applications."><title>06 machine learning pipeline · Python → Data → AI</title><style>
+:root{--ink:#172c35;--muted:#526770;--teal:#126e7e;--paper:#fcfaf5;--line:#d7e0df;--nav:#eef3f1}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--teal);text-underline-offset:3px}a:hover{color:#093e49}a:focus-visible,button:focus-visible{outline:3px solid #bc5738;outline-offset:3px}
+.brand{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--teal)}.layout{display:grid;grid-template-columns:250px minmax(0,950px);max-width:1240px;margin:auto;gap:44px;padding:38px 30px 80px}
+aside{position:sticky;top:24px;height:calc(100vh - 48px);overflow:auto;padding-right:14px;font-size:13px;line-height:1.5}aside .brand{display:block;padding-bottom:18px;border-bottom:1px solid var(--line)}.navlinks{display:grid;gap:8px;margin:20px 0}.navlinks a{text-decoration:none;padding:7px 10px;border-radius:6px}.navlinks a.current{background:var(--ink);color:white;font-weight:650}.toc{padding-top:18px;border-top:1px solid var(--line)}.toc ul{list-style:none;margin:0;padding:0}.toc>ul>li>a{display:none}.toc li a{display:block;padding:5px 0;text-decoration:none}.toc ul ul{padding:0}.toc ul ul ul{padding-left:12px}.toc li{margin:0}
+main{min-width:0}h1{font-family:Georgia,serif;font-size:52px;line-height:1.09;letter-spacing:-1.6px;margin:28px 0 25px;font-weight:500}h2{font-size:27px;line-height:1.3;margin:55px 0 20px;border-top:1px solid var(--line);padding-top:28px;letter-spacing:-.5px}h3{font-size:20px;line-height:1.4;margin:30px 0 12px}p{margin:15px 0}li{margin:9px 0}strong{font-weight:700}code{font-size:.88em;background:#edf1ef;padding:2px 5px;border-radius:4px;color:#154e59}pre{background:#142d38;color:#edf7f4;padding:22px;border-radius:9px;overflow:auto;line-height:1.65;font-size:14px;margin:24px 0}pre code{background:none;color:inherit;padding:0;font-size:inherit}.tablewrap{overflow:auto;margin:25px 0;border:1px solid var(--line);border-radius:8px}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.55}th{text-align:left;background:#e9efeb;font-weight:700;padding:13px 15px;vertical-align:top}td{padding:13px 15px;border-top:1px solid var(--line);vertical-align:top}tbody tr:nth-child(even){background:#f4f5ef}td:first-child{font-weight:550}blockquote{border-left:4px solid var(--teal);margin:24px 0;padding:2px 22px;background:var(--nav)}.topline{display:flex;justify-content:space-between;gap:20px;align-items:center}.topline span{font-size:12px;color:var(--muted);letter-spacing:.6px}.topline button{border:1px solid var(--line);border-radius:6px;padding:8px 12px;background:transparent;color:var(--muted);cursor:pointer}.meta{color:var(--muted);font-size:13px;margin:35px 0;padding-top:20px;border-top:1px solid var(--line)}.output{background:#eef3ef;color:#263f47;border-left:3px solid #147d92;white-space:pre-wrap;word-break:break-word}.cell-label{font:11px/1.5 system-ui;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin:24px 0 -15px}.plot{display:block;max-width:100%;height:auto;margin:25px auto;border-radius:8px;background:white}details{border:1px solid var(--line);border-radius:6px;padding:12px 16px;margin:18px 0}summary{cursor:pointer;font-weight:600}
+@media(max-width:950px){.layout{grid-template-columns:190px minmax(0,1fr);gap:25px;padding:25px 20px}h1{font-size:43px}}
+@media(max-width:700px){.layout{display:block;padding:20px 18px 50px}aside{position:static;height:auto;padding:0;margin-bottom:30px}.navlinks{grid-template-columns:1fr 1fr;gap:3px}.toc{display:none}h1{font-size:39px}h2{font-size:25px}body{font-size:16px}.topline{flex-wrap:wrap}th,td{min-width:110px}pre{padding:16px;font-size:13px}}
+@media print{body{background:white;font:11pt/1.5 Georgia,serif;color:#111}.layout{display:block;padding:0;max-width:none}aside,.topline button{display:none}h1{font-size:30pt}h2{font-size:20pt;break-before:page}h3{font-size:14pt}pre{white-space:pre-wrap;background:#f2f2f2;color:#111;border:1px solid #ddd;break-inside:avoid;font-size:9pt}table{font-size:9pt}.tablewrap{overflow:visible}tr{break-inside:avoid}a{color:#111;text-decoration:underline}.plot{max-height:7in;object-fit:contain}.meta{font-size:9pt}}
+</style></head><body><div class="layout"><aside><a class="brand" href="../index.html">Python / Data / AI</a><nav class="navlinks" aria-label="Course materials"><a class="" href="../index.html">Start here</a><a class="" href="../COURSE.html">Course handbook</a><a class="" href="../BRIDGE.html">AI apps & career</a><a class="" href="../PRACTICE.html">40 exercises</a><a class="" href="../GLOSSARY.html">Glossary</a><a class="" href="../SOURCES.html">Resource evaluation</a><a class="" href="../PROGRESS.html">Progress tracker</a><a class="" href="../SOLUTIONS.html">Answer guide</a><a class="" href="../VALIDATION.html">Verification</a><a href="../LABS.html">Notebook reading room</a></nav><nav aria-label="Page contents"></nav></aside><main><div class="topline"><span>YOUR BEGINNER-TO-BUILDER COURSE · SEPTEMBER 2026</span><button type="button" onclick="window.print()">Print / Save PDF</button></div><p><a href="../notebooks/06_machine_learning_pipeline.ipynb" download>Download executable notebook</a> · This page is a reading preview of the notebook and its saved outputs.</p><h1 id="6-a-complete-regression-workflow">6. A complete regression workflow</h1>
+<h2 id="goal">Goal</h2>
+<p>Compare a trivial baseline, a regularized linear model, and a tree ensemble using training-side cross-validation, then evaluate the selected model once on held-back data.
+Course Modules 9–10. This uses generated independent observations and a deliberately simple regression relationship, with 5% missing feature entries. The target uses arbitrary units. Scores are teaching results, not forecasts of real-world model performance.</p>
+<h2 id="setup">Setup</h2>
+<p>Uses NumPy and scikit-learn; requires no downloads or credentials.
+References: <a href="https://scikit-learn.org/stable/common_pitfalls.html">scikit-learn pitfalls</a>, <a href="https://inria.github.io/scikit-learn-mooc/">Inria course</a>.</p>
+<h2 id="steps">Steps</h2>
+<h3 id="1-generate-data-and-reserve-a-test-set">1. Generate data and reserve a test set</h3>
+<p>The split is random because the generated observations are independent. This choice would need reconsideration for time series or grouped records.</p>
+<div class="cell-label">Python cell</div><pre><code>import numpy as np
+import pandas as pd
+from sklearn.datasets import make_regression
+from sklearn.model_selection import train_test_split, KFold, cross_val_score
+from sklearn.pipeline import make_pipeline
+from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import StandardScaler
+from sklearn.dummy import DummyRegressor
+from sklearn.linear_model import Ridge
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_absolute_error
+
+X, y = make_regression(n_samples=700, n_features=5, n_informative=4, noise=20, random_state=42)
+rng = np.random.default_rng(42)
+X[rng.random(X.shape) &lt; 0.05] = np.nan
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+print(&quot;Train and test shapes:&quot;, X_train.shape, X_test.shape)
+assert len(X_train) == 560 and len(X_test) == 140</code></pre>
+<pre class="output">Train and test shapes: (560, 5) (140, 5)
+</pre>
+<h3 id="2-define-candidates-and-the-selection-rule">2. Define candidates and the selection rule</h3>
+<p>Choose lowest mean training-side CV MAE. Each fold learns its own imputer/scaler. The held-back test is not used here.</p>
+<div class="cell-label">Python cell</div><pre><code>candidates = {
+    &quot;dummy median&quot;: make_pipeline(SimpleImputer(strategy=&quot;median&quot;), DummyRegressor(strategy=&quot;median&quot;)),
+    &quot;ridge&quot;: make_pipeline(SimpleImputer(strategy=&quot;median&quot;), StandardScaler(), Ridge(alpha=1.0)),
+    &quot;random forest&quot;: make_pipeline(SimpleImputer(strategy=&quot;median&quot;), RandomForestRegressor(n_estimators=100, min_samples_leaf=3, random_state=42, n_jobs=1)),
+}
+cv = KFold(n_splits=5, shuffle=True, random_state=42)
+rows = []
+for name, model in candidates.items():
+    errors = -cross_val_score(model, X_train, y_train, cv=cv, scoring=&quot;neg_mean_absolute_error&quot;, n_jobs=1)
+    rows.append({&quot;model&quot;: name, &quot;cv_mae&quot;: errors.mean(), &quot;fold_sd&quot;: errors.std(ddof=1)})
+comparison = pd.DataFrame(rows).sort_values(&quot;cv_mae&quot;).reset_index(drop=True)
+print(comparison.to_string(index=False))
+selected_name = comparison.iloc[0][&quot;model&quot;]
+print(&quot;Selected using training data only:&quot;, selected_name)</code></pre>
+<pre class="output">        model     cv_mae   fold_sd
+        ridge  25.035324  2.582208
+random forest  36.436683  4.054826
+ dummy median 109.541779 10.277053
+Selected using training data only: ridge
+</pre>
+<h3 id="3-freeze-the-decision-and-evaluate">3. Freeze the decision and evaluate</h3>
+<p>Both the selected model and reference baseline are fitted on all training data. Fold SD above is descriptive variability, not a confidence interval.</p>
+<div class="cell-label">Python cell</div><pre><code>selected_model = candidates[selected_name]
+selected_model.fit(X_train, y_train)
+predictions = selected_model.predict(X_test)
+dummy = make_pipeline(SimpleImputer(strategy=&quot;median&quot;), DummyRegressor(strategy=&quot;median&quot;))
+dummy.fit(X_train, y_train)
+test_mae = mean_absolute_error(y_test, predictions)
+baseline_mae = mean_absolute_error(y_test, dummy.predict(X_test))
+print(f&quot;Final test MAE: {test_mae:.2f} target units&quot;)
+print(f&quot;Baseline test MAE: {baseline_mae:.2f} target units&quot;)
+print(f&quot;Relative MAE reduction: {(baseline_mae-test_mae)/baseline_mae:.1%}&quot;)
+assert predictions.shape == y_test.shape
+assert np.isfinite(predictions).all()
+assert test_mae &gt;= 0 and baseline_mae &gt;= 0</code></pre>
+<pre class="output">Final test MAE: 25.70 target units
+Baseline test MAE: 107.39 target units
+Relative MAE reduction: 76.1%
+</pre>
+<h3 id="4-inspect-errors-after-final-assessment">4. Inspect errors after final assessment</h3>
+<p>Use these examples to understand limitations. If they inspire model changes, you need fresh evaluation evidence for the revised model.</p>
+<div class="cell-label">Python cell</div><pre><code>errors = pd.DataFrame({&quot;actual&quot;: y_test, &quot;predicted&quot;: predictions})
+errors[&quot;absolute_error&quot;] = (errors[&quot;actual&quot;] - errors[&quot;predicted&quot;]).abs()
+print(errors.nlargest(5, &quot;absolute_error&quot;).round(2).to_string(index=False))</code></pre>
+<pre class="output"> actual  predicted  absolute_error
+ 243.60      60.82          182.77
+-231.77     -60.45          171.32
+ 148.36      13.62          134.73
+ 176.91      62.54          114.37
+ -79.97      19.67           99.64
+</pre>
+<h2 id="checks">Checks</h2>
+<p>Explain why imputation lives inside the pipeline. Explain why a linear model can do well on this generated relationship and why this does not rank model families universally. Report the actual outputs, including a failure to improve if one occurs; do not make passing conditional on beating a baseline on every dataset.</p>
+<h2 id="next-steps">Next Steps</h2>
+<p>Exercises 30–35. For a new experiment, work only with training-side validation and record choices before execution. The existing test has now been revealed: do not claim it remains a pristine test for an adaptively redesigned model. Your independent capstone needs its own declared split.</p><div class="meta">Designed for 10–15 hours a week · 160-hour foundation + 40-hour application and career bridge<br>Learn by building, testing, and explaining. Time estimates are planning guides; checkpoints determine progress.</div></main></div></body></html>

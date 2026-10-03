@@ -1,0 +1,87 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A comprehensive beginner Python course for data analytics, machine learning, and AI applications."><title>01 python basics · Python → Data → AI</title><style>
+:root{--ink:#172c35;--muted:#526770;--teal:#126e7e;--paper:#fcfaf5;--line:#d7e0df;--nav:#eef3f1}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--teal);text-underline-offset:3px}a:hover{color:#093e49}a:focus-visible,button:focus-visible{outline:3px solid #bc5738;outline-offset:3px}
+.brand{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--teal)}.layout{display:grid;grid-template-columns:250px minmax(0,950px);max-width:1240px;margin:auto;gap:44px;padding:38px 30px 80px}
+aside{position:sticky;top:24px;height:calc(100vh - 48px);overflow:auto;padding-right:14px;font-size:13px;line-height:1.5}aside .brand{display:block;padding-bottom:18px;border-bottom:1px solid var(--line)}.navlinks{display:grid;gap:8px;margin:20px 0}.navlinks a{text-decoration:none;padding:7px 10px;border-radius:6px}.navlinks a.current{background:var(--ink);color:white;font-weight:650}.toc{padding-top:18px;border-top:1px solid var(--line)}.toc ul{list-style:none;margin:0;padding:0}.toc>ul>li>a{display:none}.toc li a{display:block;padding:5px 0;text-decoration:none}.toc ul ul{padding:0}.toc ul ul ul{padding-left:12px}.toc li{margin:0}
+main{min-width:0}h1{font-family:Georgia,serif;font-size:52px;line-height:1.09;letter-spacing:-1.6px;margin:28px 0 25px;font-weight:500}h2{font-size:27px;line-height:1.3;margin:55px 0 20px;border-top:1px solid var(--line);padding-top:28px;letter-spacing:-.5px}h3{font-size:20px;line-height:1.4;margin:30px 0 12px}p{margin:15px 0}li{margin:9px 0}strong{font-weight:700}code{font-size:.88em;background:#edf1ef;padding:2px 5px;border-radius:4px;color:#154e59}pre{background:#142d38;color:#edf7f4;padding:22px;border-radius:9px;overflow:auto;line-height:1.65;font-size:14px;margin:24px 0}pre code{background:none;color:inherit;padding:0;font-size:inherit}.tablewrap{overflow:auto;margin:25px 0;border:1px solid var(--line);border-radius:8px}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.55}th{text-align:left;background:#e9efeb;font-weight:700;padding:13px 15px;vertical-align:top}td{padding:13px 15px;border-top:1px solid var(--line);vertical-align:top}tbody tr:nth-child(even){background:#f4f5ef}td:first-child{font-weight:550}blockquote{border-left:4px solid var(--teal);margin:24px 0;padding:2px 22px;background:var(--nav)}.topline{display:flex;justify-content:space-between;gap:20px;align-items:center}.topline span{font-size:12px;color:var(--muted);letter-spacing:.6px}.topline button{border:1px solid var(--line);border-radius:6px;padding:8px 12px;background:transparent;color:var(--muted);cursor:pointer}.meta{color:var(--muted);font-size:13px;margin:35px 0;padding-top:20px;border-top:1px solid var(--line)}.output{background:#eef3ef;color:#263f47;border-left:3px solid #147d92;white-space:pre-wrap;word-break:break-word}.cell-label{font:11px/1.5 system-ui;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin:24px 0 -15px}.plot{display:block;max-width:100%;height:auto;margin:25px auto;border-radius:8px;background:white}details{border:1px solid var(--line);border-radius:6px;padding:12px 16px;margin:18px 0}summary{cursor:pointer;font-weight:600}
+@media(max-width:950px){.layout{grid-template-columns:190px minmax(0,1fr);gap:25px;padding:25px 20px}h1{font-size:43px}}
+@media(max-width:700px){.layout{display:block;padding:20px 18px 50px}aside{position:static;height:auto;padding:0;margin-bottom:30px}.navlinks{grid-template-columns:1fr 1fr;gap:3px}.toc{display:none}h1{font-size:39px}h2{font-size:25px}body{font-size:16px}.topline{flex-wrap:wrap}th,td{min-width:110px}pre{padding:16px;font-size:13px}}
+@media print{body{background:white;font:11pt/1.5 Georgia,serif;color:#111}.layout{display:block;padding:0;max-width:none}aside,.topline button{display:none}h1{font-size:30pt}h2{font-size:20pt;break-before:page}h3{font-size:14pt}pre{white-space:pre-wrap;background:#f2f2f2;color:#111;border:1px solid #ddd;break-inside:avoid;font-size:9pt}table{font-size:9pt}.tablewrap{overflow:visible}tr{break-inside:avoid}a{color:#111;text-decoration:underline}.plot{max-height:7in;object-fit:contain}.meta{font-size:9pt}}
+</style></head><body><div class="layout"><aside><a class="brand" href="../index.html">Python / Data / AI</a><nav class="navlinks" aria-label="Course materials"><a class="" href="../index.html">Start here</a><a class="" href="../COURSE.html">Course handbook</a><a class="" href="../BRIDGE.html">AI apps & career</a><a class="" href="../PRACTICE.html">40 exercises</a><a class="" href="../GLOSSARY.html">Glossary</a><a class="" href="../SOURCES.html">Resource evaluation</a><a class="" href="../PROGRESS.html">Progress tracker</a><a class="" href="../SOLUTIONS.html">Answer guide</a><a class="" href="../VALIDATION.html">Verification</a><a href="../LABS.html">Notebook reading room</a></nav><nav aria-label="Page contents"></nav></aside><main><div class="topline"><span>YOUR BEGINNER-TO-BUILDER COURSE · SEPTEMBER 2026</span><button type="button" onclick="window.print()">Print / Save PDF</button></div><p><a href="../notebooks/01_python_basics.ipynb" download>Download executable notebook</a> · This page is a reading preview of the notebook and its saved outputs.</p><h1 id="1-python-from-zero">1. Python from zero</h1>
+<h2 id="goal">Goal</h2>
+<p>Read and change a small program using values, decisions, collections, and loops.
+Course Modules 1–2. Predict each output before running it. All data are invented.</p>
+<h2 id="setup">Setup</h2>
+<p>Select your course Python kernel. This notebook uses only Python's standard library.
+Reference: <a href="https://cs50.harvard.edu/python/">CS50P</a>.</p>
+<h2 id="steps">Steps</h2>
+<h3 id="1-calculate-and-format">1. Calculate and format</h3>
+<p>The right side of an assignment is evaluated before its result is assigned to the name on the left.</p>
+<div class="cell-label">Python cell</div><pre><code>quantity = 3
+unit_price = 12.50
+discount_rate = 0.10
+delivery_fee = 5
+total = quantity * unit_price * (1 - discount_rate) + delivery_fee
+print(f&quot;Total: {total:.2f} AED&quot;)
+assert total == 38.75</code></pre>
+<pre class="output">Total: 38.75 AED
+</pre>
+<h3 id="2-inspect-types-and-text">2. Inspect types and text</h3>
+<p>Quotes make a value text. Calling <code>float</code> converts valid numeric text into a number.</p>
+<div class="cell-label">Python cell</div><pre><code>text_quantity = &quot;4&quot;
+text_price = &quot;7.5&quot;
+print(text_quantity * 2)
+numeric_total = int(text_quantity) * float(text_price)
+print(numeric_total, type(numeric_total).__name__)
+name = &quot;  sOMRIt  &quot;.strip().title()
+print(name, name[0], name[-1])
+assert numeric_total == 30
+assert name == &quot;Somrit&quot;</code></pre>
+<pre class="output">44
+30.0 float
+Somrit S t
+</pre>
+<h3 id="3-make-a-decision">3. Make a decision</h3>
+<p>Test the boundaries; only the first matching branch runs.</p>
+<div class="cell-label">Python cell</div><pre><code>spend = 50
+if spend &gt;= 100:
+    fee = 0
+elif spend &gt;= 50:
+    fee = 5
+else:
+    fee = 10
+print(&quot;Delivery:&quot;, fee)
+assert fee == 5</code></pre>
+<pre class="output">Delivery: 5
+</pre>
+<h3 id="4-group-values-with-a-loop">4. Group values with a loop</h3>
+<p>Trace the dictionary after each order.</p>
+<div class="cell-label">Python cell</div><pre><code>orders = [(&quot;A&quot;, 12), (&quot;B&quot;, 8), (&quot;A&quot;, 15)]
+totals = {}
+for customer, amount in orders:
+    totals[customer] = totals.get(customer, 0) + amount
+    print(customer, amount, totals.copy())
+assert totals == {&quot;A&quot;: 27, &quot;B&quot;: 8}</code></pre>
+<pre class="output">A 12 {&#x27;A&#x27;: 12}
+B 8 {&#x27;A&#x27;: 12, &#x27;B&#x27;: 8}
+A 15 {&#x27;A&#x27;: 27, &#x27;B&#x27;: 8}
+</pre>
+<h3 id="5-check-shared-objects">5. Check shared objects</h3>
+<p>Two names can refer to the same list. A shallow copy separates the outer list.</p>
+<div class="cell-label">Python cell</div><pre><code>a = [1, 2]
+b = a
+b.append(3)
+print(&quot;a after editing b:&quot;, a)
+c = a.copy()
+c.append(4)
+print(&quot;a:&quot;, a, &quot;c:&quot;, c)
+assert a == [1, 2, 3]
+assert c == [1, 2, 3, 4]</code></pre>
+<pre class="output">a after editing b: [1, 2, 3]
+a: [1, 2, 3] c: [1, 2, 3, 4]
+</pre>
+<h2 id="checks">Checks</h2>
+<p>The assertions confirm this worked example. Your skill check is separate: in a new cell, summarize a different list of orders without looking at Step 4, then test an empty list.</p>
+<h2 id="next-steps">Next Steps</h2>
+<p>Complete exercises 1–10 as you finish Modules 1–2. Explain <code>=</code> versus <code>==</code>, strings versus numbers, and why a loop updates a dictionary. Restart the kernel and run all cells before saving.</p><div class="meta">Designed for 10–15 hours a week · 160-hour foundation + 40-hour application and career bridge<br>Learn by building, testing, and explaining. Time estimates are planning guides; checkpoints determine progress.</div></main></div></body></html>

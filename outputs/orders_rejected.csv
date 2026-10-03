@@ -1,0 +1,5 @@
+order_id,date,customer_id,region,units,unit_price,reason
+O004,2026-01-02,C04,South,-1.0,25.0,invalid_units
+O007,2026-01-02,C07,South,4.0,,invalid_price
+O010,,C10,South,3.0,10.0,invalid_date
+O013,2026-01-04,C01,South,,15.0,invalid_units

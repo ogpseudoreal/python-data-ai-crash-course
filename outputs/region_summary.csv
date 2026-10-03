@@ -1,0 +1,5 @@
+region,orders,revenue_aed,average_order_aed
+East,20,1000.0,50.0
+North,20,1000.0,50.0
+South,15,775.0,51.666666666666664
+Unknown,1,20.0,20.0

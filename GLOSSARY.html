@@ -1,0 +1,837 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A comprehensive beginner Python course for data analytics, machine learning, and AI applications."><title>Glossary · Python → Data → AI</title><style>
+:root{--ink:#172c35;--muted:#526770;--teal:#126e7e;--paper:#fcfaf5;--line:#d7e0df;--nav:#eef3f1}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--teal);text-underline-offset:3px}a:hover{color:#093e49}a:focus-visible,button:focus-visible{outline:3px solid #bc5738;outline-offset:3px}
+.brand{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--teal)}.layout{display:grid;grid-template-columns:250px minmax(0,950px);max-width:1240px;margin:auto;gap:44px;padding:38px 30px 80px}
+aside{position:sticky;top:24px;height:calc(100vh - 48px);overflow:auto;padding-right:14px;font-size:13px;line-height:1.5}aside .brand{display:block;padding-bottom:18px;border-bottom:1px solid var(--line)}.navlinks{display:grid;gap:8px;margin:20px 0}.navlinks a{text-decoration:none;padding:7px 10px;border-radius:6px}.navlinks a.current{background:var(--ink);color:white;font-weight:650}.toc{padding-top:18px;border-top:1px solid var(--line)}.toc ul{list-style:none;margin:0;padding:0}.toc>ul>li>a{display:none}.toc li a{display:block;padding:5px 0;text-decoration:none}.toc ul ul{padding:0}.toc ul ul ul{padding-left:12px}.toc li{margin:0}
+main{min-width:0}h1{font-family:Georgia,serif;font-size:52px;line-height:1.09;letter-spacing:-1.6px;margin:28px 0 25px;font-weight:500}h2{font-size:27px;line-height:1.3;margin:55px 0 20px;border-top:1px solid var(--line);padding-top:28px;letter-spacing:-.5px}h3{font-size:20px;line-height:1.4;margin:30px 0 12px}p{margin:15px 0}li{margin:9px 0}strong{font-weight:700}code{font-size:.88em;background:#edf1ef;padding:2px 5px;border-radius:4px;color:#154e59}pre{background:#142d38;color:#edf7f4;padding:22px;border-radius:9px;overflow:auto;line-height:1.65;font-size:14px;margin:24px 0}pre code{background:none;color:inherit;padding:0;font-size:inherit}.tablewrap{overflow:auto;margin:25px 0;border:1px solid var(--line);border-radius:8px}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.55}th{text-align:left;background:#e9efeb;font-weight:700;padding:13px 15px;vertical-align:top}td{padding:13px 15px;border-top:1px solid var(--line);vertical-align:top}tbody tr:nth-child(even){background:#f4f5ef}td:first-child{font-weight:550}blockquote{border-left:4px solid var(--teal);margin:24px 0;padding:2px 22px;background:var(--nav)}.topline{display:flex;justify-content:space-between;gap:20px;align-items:center}.topline span{font-size:12px;color:var(--muted);letter-spacing:.6px}.topline button{border:1px solid var(--line);border-radius:6px;padding:8px 12px;background:transparent;color:var(--muted);cursor:pointer}.meta{color:var(--muted);font-size:13px;margin:35px 0;padding-top:20px;border-top:1px solid var(--line)}.output{background:#eef3ef;color:#263f47;border-left:3px solid #147d92;white-space:pre-wrap;word-break:break-word}.cell-label{font:11px/1.5 system-ui;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin:24px 0 -15px}.plot{display:block;max-width:100%;height:auto;margin:25px auto;border-radius:8px;background:white}details{border:1px solid var(--line);border-radius:6px;padding:12px 16px;margin:18px 0}summary{cursor:pointer;font-weight:600}
+@media(max-width:950px){.layout{grid-template-columns:190px minmax(0,1fr);gap:25px;padding:25px 20px}h1{font-size:43px}}
+@media(max-width:700px){.layout{display:block;padding:20px 18px 50px}aside{position:static;height:auto;padding:0;margin-bottom:30px}.navlinks{grid-template-columns:1fr 1fr;gap:3px}.toc{display:none}h1{font-size:39px}h2{font-size:25px}body{font-size:16px}.topline{flex-wrap:wrap}th,td{min-width:110px}pre{padding:16px;font-size:13px}}
+@media print{body{background:white;font:11pt/1.5 Georgia,serif;color:#111}.layout{display:block;padding:0;max-width:none}aside,.topline button{display:none}h1{font-size:30pt}h2{font-size:20pt;break-before:page}h3{font-size:14pt}pre{white-space:pre-wrap;background:#f2f2f2;color:#111;border:1px solid #ddd;break-inside:avoid;font-size:9pt}table{font-size:9pt}.tablewrap{overflow:visible}tr{break-inside:avoid}a{color:#111;text-decoration:underline}.plot{max-height:7in;object-fit:contain}.meta{font-size:9pt}}
+</style></head><body><div class="layout"><aside><a class="brand" href="index.html">Python / Data / AI</a><nav class="navlinks" aria-label="Course materials"><a class="" href="index.html">Start here</a><a class="" href="COURSE.html">Course handbook</a><a class="" href="BRIDGE.html">AI apps & career</a><a class="" href="PRACTICE.html">40 exercises</a><a class="current" href="GLOSSARY.html">Glossary</a><a class="" href="SOURCES.html">Resource evaluation</a><a class="" href="PROGRESS.html">Progress tracker</a><a class="" href="SOLUTIONS.html">Answer guide</a><a class="" href="VALIDATION.html">Verification</a><a href="LABS.html">Notebook reading room</a></nav><nav aria-label="Page contents"><div class="toc">
+<ul>
+<li><a href="#python-data-ml-and-ai-glossary">Python, data, ML, and AI glossary</a><ul>
+<li><a href="#tools-and-programming">Tools and programming</a></li>
+<li><a href="#data-and-analytics">Data and analytics</a></li>
+<li><a href="#statistics-and-mathematics">Statistics and mathematics</a></li>
+<li><a href="#machine-learning-and-ai">Machine learning and AI</a></li>
+<li><a href="#often-confused-pairs">Often-confused pairs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></aside><main><div class="topline"><span>YOUR BEGINNER-TO-BUILDER COURSE · SEPTEMBER 2026</span><button type="button" onclick="window.print()">Print / Save PDF</button></div><h1 id="python-data-ml-and-ai-glossary">Python, data, ML, and AI glossary</h1>
+<p>Use this as a lookup tool, not a memorization assignment. Learn a term when you first use it, then explain it with your own example. The definitions below are original concise teaching definitions; for exact API behavior, use the library documentation linked in <code>SOURCES.md</code>.</p>
+<h2 id="tools-and-programming">Tools and programming</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Plain English meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Algorithm</td>
+<td>A defined sequence of steps for solving a problem.</td>
+</tr>
+<tr>
+<td>API</td>
+<td>An agreed interface through which one piece of software uses another.</td>
+</tr>
+<tr>
+<td>Argument</td>
+<td>A value supplied when calling a function.</td>
+</tr>
+<tr>
+<td>Assertion</td>
+<td>A development-time check that a condition holds; failure raises an error.</td>
+</tr>
+<tr>
+<td>Attribute</td>
+<td>A named value belonging to an object, such as <code>array.shape</code>.</td>
+</tr>
+<tr>
+<td>Boolean</td>
+<td>A logical value: <code>True</code> or <code>False</code>.</td>
+</tr>
+<tr>
+<td>Breakpoint</td>
+<td>A place where a debugger pauses execution so you can inspect state.</td>
+</tr>
+<tr>
+<td>Class</td>
+<td>A definition used to create objects with particular data and behavior.</td>
+</tr>
+<tr>
+<td>CLI</td>
+<td>Command-line interface: interacting through typed terminal commands.</td>
+</tr>
+<tr>
+<td>Code</td>
+<td>Instructions written in a programming language.</td>
+</tr>
+<tr>
+<td>Comment</td>
+<td>Explanatory text in source code that is not executed, usually after <code>#</code>.</td>
+</tr>
+<tr>
+<td>Comprehension</td>
+<td>Compact syntax for constructing a collection from an iterable.</td>
+</tr>
+<tr>
+<td>Conditional</td>
+<td>A branch that runs according to whether a condition is true.</td>
+</tr>
+<tr>
+<td>Context manager</td>
+<td>An object used with <code>with</code> to manage setup and cleanup, such as closing a file.</td>
+</tr>
+<tr>
+<td>Debugging</td>
+<td>Finding the cause of incorrect behavior and correcting it.</td>
+</tr>
+<tr>
+<td>Dependency</td>
+<td>Another library or tool your program requires.</td>
+</tr>
+<tr>
+<td>Dictionary</td>
+<td>A mapping from unique keys to values, such as <code>{"city": "Dubai"}</code>.</td>
+</tr>
+<tr>
+<td>Docstring</td>
+<td>Text at the start of a function/module/class explaining its use.</td>
+</tr>
+<tr>
+<td>Environment variable</td>
+<td>A value supplied by the surrounding operating environment, often used for configuration.</td>
+</tr>
+<tr>
+<td>Exception</td>
+<td>A runtime signal that an operation could not proceed normally.</td>
+</tr>
+<tr>
+<td>Expression</td>
+<td>Code that evaluates to a value, such as <code>price * quantity</code>.</td>
+</tr>
+<tr>
+<td>Float</td>
+<td>A number stored using floating-point representation; often approximate.</td>
+</tr>
+<tr>
+<td>Function</td>
+<td>A named reusable operation that may accept inputs and return a result.</td>
+</tr>
+<tr>
+<td>Git</td>
+<td>A system for recording and comparing versions of files.</td>
+</tr>
+<tr>
+<td>IDE</td>
+<td>Integrated development environment: tools for editing, running, and debugging code.</td>
+</tr>
+<tr>
+<td>Immutable</td>
+<td>Unable to be changed in place after creation, as with a string.</td>
+</tr>
+<tr>
+<td>Import</td>
+<td>Make another module's functionality available in your code.</td>
+</tr>
+<tr>
+<td>Index</td>
+<td>A position or label used to access an item; the meaning depends on the object.</td>
+</tr>
+<tr>
+<td>Integer</td>
+<td>A whole number, represented by Python's <code>int</code>.</td>
+</tr>
+<tr>
+<td>Interpreter</td>
+<td>The program that executes Python code.</td>
+</tr>
+<tr>
+<td>Iterable</td>
+<td>Something whose elements can be visited, such as a list or range.</td>
+</tr>
+<tr>
+<td>JSON</td>
+<td>A text format for exchanging nested data such as objects and arrays.</td>
+</tr>
+<tr>
+<td>Kernel</td>
+<td>The process executing notebook cells and storing their current state.</td>
+</tr>
+<tr>
+<td>Library</td>
+<td>Reusable code implementing related capabilities.</td>
+</tr>
+<tr>
+<td>List</td>
+<td>An ordered, mutable sequence of items.</td>
+</tr>
+<tr>
+<td>Loop</td>
+<td>Code that repeats over items or while a condition holds.</td>
+</tr>
+<tr>
+<td>Method</td>
+<td>A function accessed through an object or class.</td>
+</tr>
+<tr>
+<td>Module</td>
+<td>An importable unit of Python code, often a <code>.py</code> file.</td>
+</tr>
+<tr>
+<td>Mutable</td>
+<td>Able to change in place, as with lists and dictionaries.</td>
+</tr>
+<tr>
+<td>None</td>
+<td>Python's explicit value for absence; distinct from zero or an empty string.</td>
+</tr>
+<tr>
+<td>Notebook</td>
+<td>A document containing text, code cells, and their outputs.</td>
+</tr>
+<tr>
+<td>Object</td>
+<td>A runtime entity with a type, identity, and value/behavior.</td>
+</tr>
+<tr>
+<td>Package</td>
+<td>A collection of reusable modules; also commonly used for installable distributions.</td>
+</tr>
+<tr>
+<td>Parameter</td>
+<td>A named input in a function definition; in ML it can instead mean a learned model quantity.</td>
+</tr>
+<tr>
+<td>Path</td>
+<td>A location of a file or directory.</td>
+</tr>
+<tr>
+<td>pip</td>
+<td>A Python package installation tool.</td>
+</tr>
+<tr>
+<td>REPL</td>
+<td>Read-evaluate-print loop: an interactive interpreter, often displaying <code>&gt;&gt;&gt;</code>.</td>
+</tr>
+<tr>
+<td>Repository</td>
+<td>A project and its tracked version history.</td>
+</tr>
+<tr>
+<td>Return value</td>
+<td>The result sent back to the caller by a function.</td>
+</tr>
+<tr>
+<td>Scope</td>
+<td>The region in which a name can be resolved.</td>
+</tr>
+<tr>
+<td>Script</td>
+<td>A program saved as a file and run to perform a task.</td>
+</tr>
+<tr>
+<td>Set</td>
+<td>A collection of distinct hashable elements.</td>
+</tr>
+<tr>
+<td>Slice</td>
+<td>Selection of a sequence interval, such as <code>items[1:4]</code>.</td>
+</tr>
+<tr>
+<td>String</td>
+<td>A sequence of text characters.</td>
+</tr>
+<tr>
+<td>Syntax</td>
+<td>The grammar governing valid code.</td>
+</tr>
+<tr>
+<td>Terminal / shell</td>
+<td>The terminal presents a text interface; a shell interprets operating-system commands.</td>
+</tr>
+<tr>
+<td>Traceback</td>
+<td>The call history shown when an exception propagates.</td>
+</tr>
+<tr>
+<td>Tuple</td>
+<td>An immutable sequence, often used for a fixed group of related values.</td>
+</tr>
+<tr>
+<td>Type</td>
+<td>The kind of value and the operations it supports.</td>
+</tr>
+<tr>
+<td>Unit test</td>
+<td>A repeatable check of a small unit of behavior against an expected result.</td>
+</tr>
+<tr>
+<td>Variable</td>
+<td>A name associated with a value/object.</td>
+</tr>
+<tr>
+<td>Virtual environment</td>
+<td>A project-specific Python environment with its own installed packages.</td>
+</tr>
+<tr>
+<td>Working directory</td>
+<td>The current folder used to resolve relative file paths.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="data-and-analytics">Data and analytics</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Plain English meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aggregation</td>
+<td>Combining multiple observations into a summary, such as sum or mean.</td>
+</tr>
+<tr>
+<td>Array</td>
+<td>An indexed collection of values; NumPy arrays support efficient numeric operations.</td>
+</tr>
+<tr>
+<td>Axis</td>
+<td>A dimension along which an array operation acts.</td>
+</tr>
+<tr>
+<td>Broadcasting</td>
+<td>Rules allowing compatible different array shapes to participate in arithmetic.</td>
+</tr>
+<tr>
+<td>Cardinality</td>
+<td>Number of distinct values or the relationship of matches between tables, depending on context.</td>
+</tr>
+<tr>
+<td>Categorical variable</td>
+<td>A value representing a category, such as region or product type.</td>
+</tr>
+<tr>
+<td>CSV</td>
+<td>Comma-separated values: a common plain-text table format.</td>
+</tr>
+<tr>
+<td>Data dictionary</td>
+<td>Definitions of columns, types, units, valid values, and meanings.</td>
+</tr>
+<tr>
+<td>DataFrame</td>
+<td>A labeled table, commonly from pandas, with potentially mixed column types.</td>
+</tr>
+<tr>
+<td>Data quality</td>
+<td>How well data satisfy the requirements of the intended use.</td>
+</tr>
+<tr>
+<td>Denominator</td>
+<td>The reference total beneath a fraction or rate.</td>
+</tr>
+<tr>
+<td>Dimension table</td>
+<td>A table of descriptive information joined to event/fact records.</td>
+</tr>
+<tr>
+<td>Duplicate</td>
+<td>A repeated record under a stated definition of identity.</td>
+</tr>
+<tr>
+<td>EDA</td>
+<td>Exploratory data analysis: inspecting distributions, relationships, and quality.</td>
+</tr>
+<tr>
+<td>ETL</td>
+<td>Extract, transform, load: obtain data, reshape/clean it, and put it into a destination.</td>
+</tr>
+<tr>
+<td>Grain</td>
+<td>What one row represents, such as one order or one customer-day.</td>
+</tr>
+<tr>
+<td>Imputation</td>
+<td>Replacing missing values using an explicit rule.</td>
+</tr>
+<tr>
+<td>Join / merge</td>
+<td>Combining tables through matching keys.</td>
+</tr>
+<tr>
+<td>Key</td>
+<td>A field or combination of fields used to identify or match records.</td>
+</tr>
+<tr>
+<td>Mask</td>
+<td>Boolean values used to select corresponding records/elements.</td>
+</tr>
+<tr>
+<td>Matrix</td>
+<td>A two-dimensional array of numbers.</td>
+</tr>
+<tr>
+<td>Missing value</td>
+<td>An absent or unknown entry; its meaning must be investigated.</td>
+</tr>
+<tr>
+<td>NaN / NA / NULL</td>
+<td>Missing-value markers whose exact behavior depends on Python/library/SQL context.</td>
+</tr>
+<tr>
+<td>Normalization</td>
+<td>An overloaded term: may mean text cleanup, a numeric rescaling, or database design. State which.</td>
+</tr>
+<tr>
+<td>Outlier</td>
+<td>An observation unusually far from others; it may be valid or erroneous.</td>
+</tr>
+<tr>
+<td>Pivot</td>
+<td>Reshaping data to put groups along rows/columns, often with aggregation.</td>
+</tr>
+<tr>
+<td>Provenance</td>
+<td>Where data came from and how they were transformed.</td>
+</tr>
+<tr>
+<td>Schema</td>
+<td>Expected fields, types, and structural constraints of data.</td>
+</tr>
+<tr>
+<td>Series</td>
+<td>A labeled one-dimensional pandas object.</td>
+</tr>
+<tr>
+<td>Shape</td>
+<td>The size of each array dimension, such as <code>(100, 3)</code>.</td>
+</tr>
+<tr>
+<td>SQL</td>
+<td>A language for querying and manipulating relational data.</td>
+</tr>
+<tr>
+<td>Standardization</td>
+<td>Often subtracting a mean and dividing by a standard deviation.</td>
+</tr>
+<tr>
+<td>Tensor</td>
+<td>A multidimensional numerical object; usage and rank conventions depend on context.</td>
+</tr>
+<tr>
+<td>Vector</td>
+<td>A one-dimensional collection of numbers.</td>
+</tr>
+<tr>
+<td>Vectorization</td>
+<td>Expressing operations on whole arrays instead of Python-level item loops.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="statistics-and-mathematics">Statistics and mathematics</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Plain English meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base rate</td>
+<td>How common an event is in the relevant population.</td>
+</tr>
+<tr>
+<td>Bias</td>
+<td>Systematic distortion in estimation or selection; in a neural layer, also an additive parameter.</td>
+</tr>
+<tr>
+<td>Bootstrap</td>
+<td>Repeated resampling with replacement to study variability under stated assumptions.</td>
+</tr>
+<tr>
+<td>Causation</td>
+<td>A change in one factor produces a change in another under an appropriate causal interpretation.</td>
+</tr>
+<tr>
+<td>Conditional probability</td>
+<td>Probability within a specified condition or subgroup.</td>
+</tr>
+<tr>
+<td>Confidence interval</td>
+<td>An interval produced by a procedure with stated long-run coverage under assumptions.</td>
+</tr>
+<tr>
+<td>Confounder</td>
+<td>A variable that can distort an apparent causal relationship.</td>
+</tr>
+<tr>
+<td>Correlation</td>
+<td>A measure of association; it does not by itself establish causation.</td>
+</tr>
+<tr>
+<td>Derivative</td>
+<td>Local rate of change of a function with respect to an input.</td>
+</tr>
+<tr>
+<td>Distribution</td>
+<td>The pattern of values and their frequencies/probabilities.</td>
+</tr>
+<tr>
+<td>Dot product</td>
+<td>Multiply corresponding vector entries and add the products.</td>
+</tr>
+<tr>
+<td>Effect size</td>
+<td>The magnitude of a difference or relationship, in a specified scale.</td>
+</tr>
+<tr>
+<td>Expected value</td>
+<td>A probability-weighted average.</td>
+</tr>
+<tr>
+<td>Gradient</td>
+<td>A collection of derivatives of a function with respect to its inputs/parameters.</td>
+</tr>
+<tr>
+<td>IID</td>
+<td>Independent and identically distributed: a modeling assumption about observations.</td>
+</tr>
+<tr>
+<td>Mean</td>
+<td>Sum divided by number of observations.</td>
+</tr>
+<tr>
+<td>Median</td>
+<td>The middle value of ordered data, or a convention for the two middle values.</td>
+</tr>
+<tr>
+<td>Null hypothesis</td>
+<td>A specified baseline claim used in a statistical test.</td>
+</tr>
+<tr>
+<td>p-value</td>
+<td>Probability under a null model of a test result at least as extreme as observed.</td>
+</tr>
+<tr>
+<td>Percentile</td>
+<td>A threshold associated with a given proportion of the distribution.</td>
+</tr>
+<tr>
+<td>Percentage point</td>
+<td>Absolute difference between percentages: 20% to 30% is 10 points.</td>
+</tr>
+<tr>
+<td>Population</td>
+<td>The full group about which a question is asked.</td>
+</tr>
+<tr>
+<td>Sample</td>
+<td>Observations actually collected from a population or process.</td>
+</tr>
+<tr>
+<td>Sampling bias</td>
+<td>Systematic difference between what is observed and the intended population.</td>
+</tr>
+<tr>
+<td>Standard deviation</td>
+<td>A measure of the spread of observations around their mean.</td>
+</tr>
+<tr>
+<td>Standard error</td>
+<td>Variability of an estimator across possible samples.</td>
+</tr>
+<tr>
+<td>Variance</td>
+<td>Average squared deviation under the chosen population/sample convention.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="machine-learning-and-ai">Machine learning and AI</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Plain English meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Accuracy</td>
+<td>Fraction of predictions that are correct.</td>
+</tr>
+<tr>
+<td>Activation</td>
+<td>A transformation, often nonlinear, applied within a neural network.</td>
+</tr>
+<tr>
+<td>AI</td>
+<td>Broad field concerned with systems performing tasks associated with intelligence.</td>
+</tr>
+<tr>
+<td>Backpropagation</td>
+<td>Efficient gradient computation through a composed network using the chain rule.</td>
+</tr>
+<tr>
+<td>Baseline</td>
+<td>A simple reference method that a proposed solution must be compared with.</td>
+</tr>
+<tr>
+<td>Batch</td>
+<td>A subset of training examples processed together.</td>
+</tr>
+<tr>
+<td>Calibration</td>
+<td>Agreement between predicted probabilities and observed frequencies.</td>
+</tr>
+<tr>
+<td>Classification</td>
+<td>Predicting a discrete category.</td>
+</tr>
+<tr>
+<td>Clustering</td>
+<td>Grouping examples by a similarity-based method without supplied class labels.</td>
+</tr>
+<tr>
+<td>Confusion matrix</td>
+<td>Counts of predicted versus actual categories.</td>
+</tr>
+<tr>
+<td>Cross-validation</td>
+<td>Repeated training/validation partitions within development data for assessment/selection.</td>
+</tr>
+<tr>
+<td>Data leakage</td>
+<td>Information entering a model/evaluation that would not be available in the intended use.</td>
+</tr>
+<tr>
+<td>Deep learning</td>
+<td>Learning with neural networks containing multiple processing layers.</td>
+</tr>
+<tr>
+<td>Drift</td>
+<td>Change in input distributions or relationships over time; specify which kind.</td>
+</tr>
+<tr>
+<td>Embedding</td>
+<td>A numeric representation, often learned, of an item such as a word or document.</td>
+</tr>
+<tr>
+<td>Epoch</td>
+<td>One complete pass through the training examples.</td>
+</tr>
+<tr>
+<td>F1</td>
+<td>Harmonic mean of precision and recall under a specified averaging rule.</td>
+</tr>
+<tr>
+<td>Feature</td>
+<td>An input used by a model.</td>
+</tr>
+<tr>
+<td>Feature engineering</td>
+<td>Constructing useful model inputs from available information.</td>
+</tr>
+<tr>
+<td>Fine-tuning</td>
+<td>Further training an existing model on selected data/objectives.</td>
+</tr>
+<tr>
+<td>Fit</td>
+<td>Learn a model or transformation's quantities from data.</td>
+</tr>
+<tr>
+<td>Generalization</td>
+<td>Performance on relevant examples beyond the training data.</td>
+</tr>
+<tr>
+<td>Generative AI</td>
+<td>Models that produce new content, such as text or images.</td>
+</tr>
+<tr>
+<td>Gradient descent</td>
+<td>Iteratively adjusting parameters opposite the gradient to reduce an objective.</td>
+</tr>
+<tr>
+<td>Hallucination</td>
+<td>Generated content that is unsupported or false despite plausible presentation.</td>
+</tr>
+<tr>
+<td>Hyperparameter</td>
+<td>A chosen model/training setting rather than a quantity directly fitted in the main training step.</td>
+</tr>
+<tr>
+<td>Inference</td>
+<td>Applying a trained model; in statistics, drawing conclusions from evidence is another meaning.</td>
+</tr>
+<tr>
+<td>Label / target</td>
+<td>The desired output supplied for supervised training.</td>
+</tr>
+<tr>
+<td>Learning rate</td>
+<td>Step-size control for parameter updates.</td>
+</tr>
+<tr>
+<td>LLM</td>
+<td>Large language model: a large trained model for processing/generating language.</td>
+</tr>
+<tr>
+<td>Loss</td>
+<td>The numerical objective used to guide model fitting.</td>
+</tr>
+<tr>
+<td>MAE</td>
+<td>Mean absolute error, in the target's units.</td>
+</tr>
+<tr>
+<td>Metric</td>
+<td>A defined measurement used to evaluate performance or outcomes.</td>
+</tr>
+<tr>
+<td>ML</td>
+<td>Machine learning: methods that learn patterns from data.</td>
+</tr>
+<tr>
+<td>Model</td>
+<td>A learned or specified mapping/representation used for prediction or understanding.</td>
+</tr>
+<tr>
+<td>Neural network</td>
+<td>A parameterized composition of layers that transforms inputs into outputs.</td>
+</tr>
+<tr>
+<td>NLP</td>
+<td>Natural language processing: computational work with human language.</td>
+</tr>
+<tr>
+<td>One-hot encoding</td>
+<td>Representing categories with indicator columns.</td>
+</tr>
+<tr>
+<td>Overfitting</td>
+<td>Learning training-specific patterns that do not transfer adequately to new data.</td>
+</tr>
+<tr>
+<td>PCA</td>
+<td>Principal component analysis: a linear representation emphasizing directions of variance.</td>
+</tr>
+<tr>
+<td>Pipeline</td>
+<td>A sequence that combines preprocessing and an estimator in one fitted workflow.</td>
+</tr>
+<tr>
+<td>Precision</td>
+<td>True positives divided by predicted positives, for a defined positive class.</td>
+</tr>
+<tr>
+<td>Pretraining</td>
+<td>Initial broad training before later adaptation or task-specific use.</td>
+</tr>
+<tr>
+<td>Prompt</td>
+<td>Instructions and/or context supplied to a model at inference.</td>
+</tr>
+<tr>
+<td>Prompt injection</td>
+<td>Untrusted content attempting to redirect a model application's instructions or actions.</td>
+</tr>
+<tr>
+<td>RAG</td>
+<td>Retrieval-augmented generation: retrieve evidence and supply it to a generator.</td>
+</tr>
+<tr>
+<td>Recall</td>
+<td>True positives divided by actual positives.</td>
+</tr>
+<tr>
+<td>Regression</td>
+<td>Predicting a numerical outcome.</td>
+</tr>
+<tr>
+<td>Regularization</td>
+<td>Constraints/penalties that discourage excessive model complexity.</td>
+</tr>
+<tr>
+<td>Reinforcement learning</td>
+<td>Learning behavior through actions and rewards in sequential interaction.</td>
+</tr>
+<tr>
+<td>Retrieval</td>
+<td>Finding relevant items or passages from a collection.</td>
+</tr>
+<tr>
+<td>RMSE</td>
+<td>Square root of mean squared error, in the target's units.</td>
+</tr>
+<tr>
+<td>ROC-AUC</td>
+<td>Area under the ROC curve, summarizing ranking across classification thresholds.</td>
+</tr>
+<tr>
+<td>Seed</td>
+<td>An initialization input used to reproduce a pseudorandom sequence.</td>
+</tr>
+<tr>
+<td>Supervised learning</td>
+<td>Learning from examples paired with desired outputs.</td>
+</tr>
+<tr>
+<td>Test set</td>
+<td>Held-back data reserved for final evaluation after development decisions.</td>
+</tr>
+<tr>
+<td>TF-IDF</td>
+<td>Term weighting based on within-document frequency and across-document rarity.</td>
+</tr>
+<tr>
+<td>Threshold</td>
+<td>A cutoff used to turn a score into a decision.</td>
+</tr>
+<tr>
+<td>Token</td>
+<td>A unit used by a language tokenizer; not necessarily a whole word.</td>
+</tr>
+<tr>
+<td>Training set</td>
+<td>Data used to fit model parameters and training-side transformations.</td>
+</tr>
+<tr>
+<td>Transformer</td>
+<td>A neural architecture using attention to combine information across positions.</td>
+</tr>
+<tr>
+<td>Underfitting</td>
+<td>A model failing to capture useful structure available in the data.</td>
+</tr>
+<tr>
+<td>Unsupervised learning</td>
+<td>Finding structure without supplied prediction targets.</td>
+</tr>
+<tr>
+<td>Validation set</td>
+<td>Data used during development to compare or tune choices.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="often-confused-pairs">Often-confused pairs</h2>
+<ul>
+<li><strong><code>=</code> / <code>==</code>:</strong> assignment / equality comparison.</li>
+<li><strong><code>print</code> / <code>return</code>:</strong> display a value / supply a function's result to its caller.</li>
+<li><strong><code>pip install</code> / <code>import</code>:</strong> install a package into an environment / use a module in code.</li>
+<li><strong>Editor / interpreter:</strong> where you write / what runs the code.</li>
+<li><strong>Standard deviation / standard error:</strong> observation spread / estimator variability.</li>
+<li><strong>Percentage / percentage points:</strong> proportional quantity / difference between percentages.</li>
+<li><strong>Prediction / explanation:</strong> a useful forecast need not reveal a causal mechanism.</li>
+<li><strong>Validation / test:</strong> development decisions / final held-back assessment.</li>
+<li><strong>Retrieval / generation:</strong> find evidence / produce content.</li>
+<li><strong>Prompting / fine-tuning:</strong> supply inference context / update model weights.</li>
+</ul><div class="meta">Designed for 10–15 hours a week · 160-hour foundation + 40-hour application and career bridge<br>Learn by building, testing, and explaining. Time estimates are planning guides; checkpoints determine progress.</div></main></div></body></html>

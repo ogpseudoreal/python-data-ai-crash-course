@@ -1,0 +1,203 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="A comprehensive beginner Python course for data analytics, machine learning, and AI applications."><title>Resource evaluation · Python → Data → AI</title><style>
+:root{--ink:#172c35;--muted:#526770;--teal:#126e7e;--paper:#fcfaf5;--line:#d7e0df;--nav:#eef3f1}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.7 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--teal);text-underline-offset:3px}a:hover{color:#093e49}a:focus-visible,button:focus-visible{outline:3px solid #bc5738;outline-offset:3px}
+.brand{font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--teal)}.layout{display:grid;grid-template-columns:250px minmax(0,950px);max-width:1240px;margin:auto;gap:44px;padding:38px 30px 80px}
+aside{position:sticky;top:24px;height:calc(100vh - 48px);overflow:auto;padding-right:14px;font-size:13px;line-height:1.5}aside .brand{display:block;padding-bottom:18px;border-bottom:1px solid var(--line)}.navlinks{display:grid;gap:8px;margin:20px 0}.navlinks a{text-decoration:none;padding:7px 10px;border-radius:6px}.navlinks a.current{background:var(--ink);color:white;font-weight:650}.toc{padding-top:18px;border-top:1px solid var(--line)}.toc ul{list-style:none;margin:0;padding:0}.toc>ul>li>a{display:none}.toc li a{display:block;padding:5px 0;text-decoration:none}.toc ul ul{padding:0}.toc ul ul ul{padding-left:12px}.toc li{margin:0}
+main{min-width:0}h1{font-family:Georgia,serif;font-size:52px;line-height:1.09;letter-spacing:-1.6px;margin:28px 0 25px;font-weight:500}h2{font-size:27px;line-height:1.3;margin:55px 0 20px;border-top:1px solid var(--line);padding-top:28px;letter-spacing:-.5px}h3{font-size:20px;line-height:1.4;margin:30px 0 12px}p{margin:15px 0}li{margin:9px 0}strong{font-weight:700}code{font-size:.88em;background:#edf1ef;padding:2px 5px;border-radius:4px;color:#154e59}pre{background:#142d38;color:#edf7f4;padding:22px;border-radius:9px;overflow:auto;line-height:1.65;font-size:14px;margin:24px 0}pre code{background:none;color:inherit;padding:0;font-size:inherit}.tablewrap{overflow:auto;margin:25px 0;border:1px solid var(--line);border-radius:8px}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.55}th{text-align:left;background:#e9efeb;font-weight:700;padding:13px 15px;vertical-align:top}td{padding:13px 15px;border-top:1px solid var(--line);vertical-align:top}tbody tr:nth-child(even){background:#f4f5ef}td:first-child{font-weight:550}blockquote{border-left:4px solid var(--teal);margin:24px 0;padding:2px 22px;background:var(--nav)}.topline{display:flex;justify-content:space-between;gap:20px;align-items:center}.topline span{font-size:12px;color:var(--muted);letter-spacing:.6px}.topline button{border:1px solid var(--line);border-radius:6px;padding:8px 12px;background:transparent;color:var(--muted);cursor:pointer}.meta{color:var(--muted);font-size:13px;margin:35px 0;padding-top:20px;border-top:1px solid var(--line)}.output{background:#eef3ef;color:#263f47;border-left:3px solid #147d92;white-space:pre-wrap;word-break:break-word}.cell-label{font:11px/1.5 system-ui;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin:24px 0 -15px}.plot{display:block;max-width:100%;height:auto;margin:25px auto;border-radius:8px;background:white}details{border:1px solid var(--line);border-radius:6px;padding:12px 16px;margin:18px 0}summary{cursor:pointer;font-weight:600}
+@media(max-width:950px){.layout{grid-template-columns:190px minmax(0,1fr);gap:25px;padding:25px 20px}h1{font-size:43px}}
+@media(max-width:700px){.layout{display:block;padding:20px 18px 50px}aside{position:static;height:auto;padding:0;margin-bottom:30px}.navlinks{grid-template-columns:1fr 1fr;gap:3px}.toc{display:none}h1{font-size:39px}h2{font-size:25px}body{font-size:16px}.topline{flex-wrap:wrap}th,td{min-width:110px}pre{padding:16px;font-size:13px}}
+@media print{body{background:white;font:11pt/1.5 Georgia,serif;color:#111}.layout{display:block;padding:0;max-width:none}aside,.topline button{display:none}h1{font-size:30pt}h2{font-size:20pt;break-before:page}h3{font-size:14pt}pre{white-space:pre-wrap;background:#f2f2f2;color:#111;border:1px solid #ddd;break-inside:avoid;font-size:9pt}table{font-size:9pt}.tablewrap{overflow:visible}tr{break-inside:avoid}a{color:#111;text-decoration:underline}.plot{max-height:7in;object-fit:contain}.meta{font-size:9pt}}
+</style></head><body><div class="layout"><aside><a class="brand" href="index.html">Python / Data / AI</a><nav class="navlinks" aria-label="Course materials"><a class="" href="index.html">Start here</a><a class="" href="COURSE.html">Course handbook</a><a class="" href="BRIDGE.html">AI apps & career</a><a class="" href="PRACTICE.html">40 exercises</a><a class="" href="GLOSSARY.html">Glossary</a><a class="current" href="SOURCES.html">Resource evaluation</a><a class="" href="PROGRESS.html">Progress tracker</a><a class="" href="SOLUTIONS.html">Answer guide</a><a class="" href="VALIDATION.html">Verification</a><a href="LABS.html">Notebook reading room</a></nav><nav aria-label="Page contents"><div class="toc">
+<ul>
+<li><a href="#resource-evaluation">Resource evaluation</a><ul>
+<li><a href="#what-was-evaluated-and-how">What was evaluated, and how</a></li>
+<li><a href="#python-foundations">Python foundations</a></li>
+<li><a href="#setup-and-data-analysis">Setup and data analysis</a></li>
+<li><a href="#statistics-and-machine-learning">Statistics and machine learning</a></li>
+<li><a href="#neural-networks-and-ai-applications">Neural networks and AI applications</a></li>
+<li><a href="#what-to-postpone-and-why">What to postpone, and why</a></li>
+<li><a href="#research-limitations-and-access-notes">Research limitations and access notes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav></aside><main><div class="topline"><span>YOUR BEGINNER-TO-BUILDER COURSE · SEPTEMBER 2026</span><button type="button" onclick="window.print()">Print / Save PDF</button></div><h1 id="resource-evaluation">Resource evaluation</h1>
+<h2 id="what-was-evaluated-and-how">What was evaluated, and how</h2>
+<p>Checked on <strong>5 September 2026</strong>. I compared a representative set of authoritative beginner courses, university materials, books by their authors, and official library documentation. I inspected course descriptions, prerequisite statements, contents, and relevant documentation pages. I did not complete every assignment or independently test every external example. This is an editorial selection for your goals, not an exhaustive internet census or a quantified ranking of learning outcomes.</p>
+<p>Selection criteria: <strong>beginner suitability, exercise quality, progression, relevance to analytics/ML/AI apps, technical currency, author/provider authority, and access friction</strong>. The verdicts are my judgments based on those criteria. A prestigious or popular resource can still be inappropriate at the beginning.</p>
+<p>The course handbook and its original labs form the main path. External material is assigned selectively. Most core explanations are available without buying a certificate. Registration may be needed for hosted exercises; paid platform access, certificates, and promotions can change. Check the provider before paying.</p>
+<h2 id="python-foundations">Python foundations</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Evaluation</th>
+<th>Use in your course</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://cs50.harvard.edu/python/">Harvard CS50P</a></td>
+<td>Explicitly accommodates people without programming experience. Includes testing, exceptions, files, and a final project. Lectures and problem sets provide a substantial practice path; some problems are demanding for a first encounter. OpenCourseWare is free.</td>
+<td><strong>Primary explanatory spine</strong>, selected topics in Modules 1–4. Completing all official problem sets and certificate requirements is extra work outside the 160-hour estimate.</td>
+</tr>
+<tr>
+<td><a href="https://www.py4e.com/lessons">Python for Everybody</a></td>
+<td>Gentle introductory progression, moving toward files, web data, and databases. Particularly useful for a data-oriented learner who needs a slower explanation. Free materials on the author's site.</td>
+<td><strong>Substitute explanations</strong>, especially variables, loops, dictionaries, and files. Do not repeat its entire beginner sequence alongside CS50P.</td>
+</tr>
+<tr>
+<td><a href="https://programming-26.mooc.fi/">University of Helsinki Python MOOC 2026</a></td>
+<td>University material divided into introductory Parts 1–7 and advanced Parts 8–14. Many exercises make it useful for repeated independent practice. Formal grading/exam participation is a separate commitment.</td>
+<td><strong>Exercise bank</strong> when a checkpoint reveals a weakness. Start with Parts 1–4; deepen functions and files as needed.</td>
+</tr>
+<tr>
+<td><a href="https://docs.python.org/3/tutorial/index.html">Official Python tutorial</a></td>
+<td>Authoritative language reference/tutorial, but explicitly intended for people who already understand programming generally. That prerequisite makes it a poor sole day-one teacher.</td>
+<td><strong>Lookup reference</strong> from Module 3 onward.</td>
+</tr>
+<tr>
+<td><a href="https://www.deeplearning.ai/courses/ai-python-for-beginners">DeepLearning.AI: AI Python for Beginners</a></td>
+<td>An approachable AI-assisted entry route with packages and APIs. Its AI-oriented format is relevant to your motivation, but independent coding checks are still necessary. The page advertises access conditions that may change.</td>
+<td><strong>Optional motivation or alternative introduction</strong>; does not replace our debugging, data-quality, and independent assessments.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="setup-and-data-analysis">Setup and data analysis</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Evaluation</th>
+<th>Use in your course</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://code.visualstudio.com/docs/python/python-tutorial">VS Code Python setup</a> and <a href="https://code.visualstudio.com/docs/datascience/jupyter-notebooks">notebook guide</a></td>
+<td>Official instructions distinguish editor, extension, interpreter, and notebook kernel. More reliable for interface details than old setup videos.</td>
+<td><strong>Required reference</strong> for Module 0.</td>
+</tr>
+<tr>
+<td><a href="https://docs.python.org/3/library/venv.html">Python venv documentation</a></td>
+<td>Precise environment and activation behavior across operating systems. Dense as a first read but excellent for resolving environment confusion.</td>
+<td><strong>Targeted troubleshooting</strong>.</td>
+</tr>
+<tr>
+<td><a href="https://numpy.org/doc/stable/user/absolute_beginners.html">NumPy absolute basics</a></td>
+<td>Official introduction to arrays, shape, indexing, and operations. Assumes enough Python to read examples.</td>
+<td><strong>Core selected sections</strong> in Module 5.</td>
+</tr>
+<tr>
+<td><a href="https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html">pandas introductory tutorials</a></td>
+<td>Small task-focused lessons map well to spreadsheet experience: loading, selection, derived columns, summaries, and combining data.</td>
+<td><strong>Core selected tutorials</strong> in Module 6.</td>
+</tr>
+<tr>
+<td><a href="https://wesmckinney.com/book/">Wes McKinney: Python for Data Analysis, 3rd edition</a></td>
+<td>Strong author-written treatment of the Python data stack, with an open-access web edition. Published examples target older Python/pandas versions than current docs.</td>
+<td><strong>Deeper companion</strong>, selected Chapters 4, 7, 8, 10; check current APIs when examples differ.</td>
+</tr>
+<tr>
+<td><a href="https://www.kaggle.com/learn">Kaggle Learn catalog</a></td>
+<td>Short, applied Python, pandas, and ML practice. Useful reinforcement, but brevity leaves less room for debugging and statistical reasoning.</td>
+<td><strong>Optional drills</strong> after the corresponding handbook module. Intro ML's <a href="https://www.kaggle.com/learn/intro-to-machine-learning">course page</a> describes no-cost access.</td>
+</tr>
+<tr>
+<td><a href="https://matplotlib.org/stable/users/explain/quick_start.html">Matplotlib quick start</a></td>
+<td>Official explanation of figures and axes, a solid basis for charts you can label and control.</td>
+<td><strong>Core plotting reference</strong> for Module 7.</td>
+</tr>
+<tr>
+<td><a href="https://docs.python.org/3/library/sqlite3.html">Python SQLite documentation</a></td>
+<td>Reliable Python/database interface reference, including parameter binding. It is not by itself a full beginner SQL course.</td>
+<td><strong>API reference</strong> alongside our guided SQL lab.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="statistics-and-machine-learning">Statistics and machine learning</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Evaluation</th>
+<th>Use in your course</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.openintro.org/book/os/">OpenIntro Statistics</a></td>
+<td>Broad introductory treatment of data, probability, inference, and modeling, with textbook and supporting materials. More depth than a quick ML video provides.</td>
+<td><strong>Selected statistics topics</strong> in Module 8; optional deeper study afterward.</td>
+</tr>
+<tr>
+<td><a href="https://developers.google.com/machine-learning/crash-course">Google ML Crash Course</a></td>
+<td>Concise concept lessons and exercises, extending into neural networks and real-world issues. Its <a href="https://developers.google.com/machine-learning/crash-course/prereqs-and-prework">prerequisites</a> include Python and mathematical readiness; “ML beginner” does not mean “programming beginner.”</td>
+<td><strong>ML concept companion</strong> in Modules 9–12 after the Python/data foundation.</td>
+</tr>
+<tr>
+<td><a href="https://inria.github.io/scikit-learn-mooc/">Inria scikit-learn MOOC</a></td>
+<td>An applied progression through tabular modeling, preprocessing, pipelines, validation, and model families. A strong fit for sound practical habits after Python basics.</td>
+<td><strong>Primary applied ML companion</strong>, selected sections in Modules 9–10.</td>
+</tr>
+<tr>
+<td><a href="https://scikit-learn.org/stable/common_pitfalls.html">scikit-learn common pitfalls</a></td>
+<td>Direct guidance on inconsistent preprocessing, leakage, and reproducibility. Narrow scope makes it valuable at the moment these mistakes become possible.</td>
+<td><strong>Required reading</strong> during your first pipeline.</td>
+</tr>
+<tr>
+<td><a href="https://www.statlearning.com/">An Introduction to Statistical Learning</a></td>
+<td>Author-hosted statistical-learning textbook with a Python edition and chapter labs. Excellent depth for understanding methods and evaluation; too much to stack in full onto the crash course.</td>
+<td><strong>Selected resampling/model-assessment reading</strong>; subsequent depth track.</td>
+</tr>
+<tr>
+<td><a href="https://www.deeplearning.ai/specializations/machine-learning">DeepLearning.AI Machine Learning Specialization</a></td>
+<td>Structured conceptual and programming route through ML with Andrew Ng. Useful if you prefer a single longer video-led program. Platform/course access terms should be checked before enrollment.</td>
+<td><strong>Alternative longer ML spine</strong> to the selected Google/Inria path, not an additional mandatory course.</td>
+</tr>
+<tr>
+<td><a href="https://www.deeplearning.ai/specializations/mathematics-for-machine-learning-and-data-science">DeepLearning.AI Mathematics for ML and Data Science</a></td>
+<td>Focused math sequence; its page expects high-school math and basic programming/ML familiarity.</td>
+<td><strong>Remediation or depth option</strong> if the Module 8 math checklist is difficult. Your existing algebra means you need not start here.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="neural-networks-and-ai-applications">Neural networks and AI applications</h2>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Evaluation</th>
+<th>Use in your course</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://docs.pytorch.org/tutorials/beginner/basics/intro.html">PyTorch Learn the Basics</a></td>
+<td>Official guided workflow covering data, models, training, and saving. Assumes familiarity with Python and deep-learning concepts.</td>
+<td><strong>Framework bridge</strong> after Notebook 7.</td>
+</tr>
+<tr>
+<td><a href="https://course.fast.ai/">fast.ai Practical Deep Learning for Coders</a></td>
+<td>Motivating, application-first deep learning. Its stated prerequisite is ability to code, with high-school mathematics; it is not a replacement for learning programming.</td>
+<td><strong>Post-foundation extension</strong>, especially for vision and applied deep learning.</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/learn/llm-course/chapter1/1">Hugging Face LLM course</a></td>
+<td>Free, ecosystem-specific treatment of language models and NLP. It explicitly requires good Python and recommends an introductory deep-learning course first.</td>
+<td><strong>Introductory chapter in Module 12</strong>, then selected model-use/demo sections in the 40-hour bridge.</td>
+</tr>
+<tr>
+<td><a href="https://huggingface.co/docs/transformers/pipeline_tutorial">Transformers pipeline guide</a> and <a href="https://huggingface.co/docs/hub/model-cards">model cards</a></td>
+<td>Official implementation and model-context guidance. Useful for choosing a real model and recording limitations instead of relying on a bare model name.</td>
+<td><strong>Application bridge references</strong>.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="what-to-postpone-and-why">What to postpone, and why</h2>
+<p>Avoid enrolling in several overlapping beginner tracks. You need one explanation that works, then enough independent practice to use it. Keep advanced metaprogramming, distributed data systems, complex agent frameworks, training large models from scratch, and extensive cloud infrastructure for later projects with a clear need. Basic tests, statistics, data provenance, SQL, leakage control, and evaluation remain in the core.</p>
+<p>Random blog posts and videos are not inherently bad, but validate version-sensitive instructions against the relevant official docs. Prefer resources that state prerequisites, expose runnable examples, include exercises, and explain failure modes. Do not treat follower counts or certificate branding as proof of teaching quality.</p>
+<h2 id="research-limitations-and-access-notes">Research limitations and access notes</h2>
+<p>The Colab FAQ and Gradio quick-start page did not return readable content through the research tool. I did not use them as evidence for pricing, hardware guarantees, or installation requirements. The Google ML prework page supports the browser-exercise fallback, and the Hugging Face course supports the later demo-building route. The Git documentation landing page redirects; use the official <a href="https://git-scm.com/doc">Git documentation entry</a> for your operating system. The supplied notebooks are separately executed and documented in <code>VALIDATION.md</code>.</p>
+<p>All handbook explanations, original exercises, and synthetic datasets were created for this course. External resources are linked for study; their books and course materials have not been reproduced as a bundled library.</p><div class="meta">Designed for 10–15 hours a week · 160-hour foundation + 40-hour application and career bridge<br>Learn by building, testing, and explaining. Time estimates are planning guides; checkpoints determine progress.</div></main></div></body></html>
